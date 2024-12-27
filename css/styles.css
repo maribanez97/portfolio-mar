@@ -1,0 +1,252 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fuentes propias */
+
+@font-face {
+    font-family: "Armany Regular"; /* nombre de la fuente (personalizado) */
+    src: url("../fonts/ARMANY-REGULAR.TTF") format('truetype');
+}
+
+@font-face {
+    font-family: "Armany Medium"; 
+    src: url("../fonts/ARMANY-MEDIUM.TTF") format('truetype');
+}
+
+@font-face {
+    font-family: "Funnel Regular"; 
+    src: url("../fonts/FUNNELDISPLAY-REGULAR.TTF") format('truetype');
+}
+
+@font-face {
+    font-family: "Funnel SemiBold"; 
+    src: url("../fonts/FUNNELDISPLAY-SEMIBOLD.TTF") format('truetype');
+}
+
+
+:root {
+    --black: #1b1b1b;
+    --white: #fafafa;
+    --font-graphic-regular: 'Armany Regular', serif;
+    --font-graphic-medium: 'Armany Medium', serif;
+    --font-web-regular: 'Funnel Regular', sans-serif;
+    --font-web-semibold: 'Funnel SemiBold', sans-serif;
+}
+
+/* Grid principal */
+
+.Container {
+    font-family: var(--font-graphic-regular);
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.Header {
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MarIcon {
+    height: 100%;
+}
+
+.MarIcon-img {
+    height: 100%;
+}
+
+.BtnsLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3em;
+}
+
+.Btn {
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 0.85em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Layout gráfico */
+.Main-graphic {
+    font-size: 1.5em;
+    width: 100%;
+    /* height: 50em; */
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 10rem);
+    gap: 2rem 0.5rem;
+}
+
+.Projects-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Projects-title {
+    font-size: 1rem;
+}
+
+.DA-item {
+    grid-area: 1/1/2/5;
+}
+
+.M-item {
+    grid-area: 2/3/3/6;
+}
+
+.PD-item {
+    grid-area: 3/2/4/5;
+}
+
+.DP-item {
+    grid-area: 4/1/5/5;
+}
+
+.Projects-img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.ImgDA {
+    background-image: url(../imgs/grid-da-comedor.jpg);
+}
+
+.ImgM {
+    background-image: url(../imgs/grid-m-catalogo.jpg);
+}
+
+.ImgPD {
+    background-image: url(../imgs/grid-pd.jpg);
+}
+
+.ImgDP {
+    background-image: url(../imgs/grid-dp-cuadros.jpg);
+}
+
+
+
+/* Layout web */
+.Main-web {
+    font-size: 1.5em;
+    width: 100%;
+    /* height: 50em; */
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 10rem);
+    gap: 2rem 0.5rem;
+}
+
+
+.SOS-item {
+    grid-area: 1/1/2/5;
+}
+
+
+.Chef-item {
+    grid-area: 2/3/3/6;
+}
+
+
+.Music-item {
+    grid-area: 3/2/4/5;
+}
+
+.ImgSOS {
+    background-image: url(../imgs/grid-da-comedor.jpg);
+}
+
+.ImgChef {
+    background-image: url(../imgs/grid-m-catalogo.jpg);
+}
+
+.ImgMusic {
+    background-image: url(../imgs/grid-pd.jpg);
+}
+
+
+
+.u-hide {
+    display: none;
+}
+
+.Footer {
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 0.8em;
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+.Blur {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Menu { 
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5em 1.5em;
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 0.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.Menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.Menu-item {
+    font-size: 2em;
+    cursor: pointer;
+}
