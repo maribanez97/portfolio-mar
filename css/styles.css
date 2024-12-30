@@ -97,8 +97,9 @@ a {
 
 
 
-/* Layout gráfico */
-.Main-graphic {
+/* Layout proyectos Diseño Gráfico */
+
+.Section-graphic {
     font-size: 1.5em;
     width: 100%;
     /* height: 50em; */
@@ -161,8 +162,9 @@ a {
 
 
 
-/* Layout web */
-.Main-web {
+/* Layout proyectos Diseño Web */
+
+.Section-web {
     font-size: 1.5em;
     width: 100%;
     /* height: 50em; */
@@ -200,10 +202,6 @@ a {
     background-image: url(../imgs/grid-pd.jpg);
 }
 
-
-
-
-
 .Footer {
     font-family: "roboto";
     font-weight: 500;
@@ -217,6 +215,7 @@ a {
 
 
 
+/* Estilos del Menu */
 
 .Blur {
     width: 100%;
@@ -261,6 +260,13 @@ a {
     cursor: pointer;
 }
 
+/* Estilo JavaScript */
+
 .u-hide {
     display: none;
+}
+
+.u-selection {
+    border-bottom: 1px solid var(--black);
+    transition: border-bottom 0.5s ease;
 }
