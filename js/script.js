@@ -11,6 +11,66 @@ const btnWeb = document.getElementById("BtnWeb");
 const btnGrafico = document.getElementById("BtnGrafico");
 const seccionGrafico = document.getElementById("Section-graphic");
 const seccionWeb = document.getElementById("Section-web");
+const ulProyectos = document.getElementById("ListaProyectos");
+
+const proyectos = [
+   { 
+    titulo: "Wabi Home",
+    tema: "grafico",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2"
+   },
+   { 
+    titulo: "Real Refresh",
+    tema: "grafico",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2"
+   },
+   { 
+    titulo: "Reproductor",
+    tema: "web",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2",
+   },
+   { 
+    titulo: "Chef-Connect",
+    tema: "web",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2"
+   },
+   { 
+    titulo: "Tu compartes, ellos también",
+    tema: "grafico",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2"
+   },
+   { 
+    titulo: "SOS360",
+    tema: "web",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2"
+   },
+   { 
+    titulo: "Control Time",
+    tema: "grafico",
+    imagen1:"grid-da-lamparas.jpg",
+    alt1:"Proyecto 1.1",
+    imagen2:"grid-da-comedor.jpg",
+    alt2:"Proyecto 1.2"
+   },
+]
 
 
 //----------------------------------
@@ -43,6 +103,7 @@ btnMenu.addEventListener('click',() => {
 
 closeMenu.addEventListener('click',() => {
     divMenu.classList.toggle("u-hide");
+    console.log("Cerrar");
 });
 
 
@@ -50,6 +111,27 @@ closeMenu.addEventListener('click',() => {
 // 3. Funciones
 //----------------------------------
 
+function imprimirProyectos(){
+    
+    proyectos.forEach((proyecto) => {
+        let titulo = proyecto.titulo;
+        let imagen1 = proyecto.imagen1;
+        let alt1 = proyecto.alt1;
+        let imagen2 = proyecto.imagen2;
+        let alt2 = proyecto.alt2;
+        console.log(proyecto)
+        ulProyectos.innerHTML += `<li class="Proyecto">
+                                    <p class="Proyecto-titulo">${titulo}</p>
+                                    <div class="Proyecto-imgs">
+                                        <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
+                                        <img class="Proyecto-img" src="./imgs/${imagen2}" alt="${alt2}">
+                                    </div>
+                                </li>`
+    });
+
+};
+
 //----------------------------------
 // 4. Inicializar nuestro programa
 //----------------------------------
+imprimirProyectos();
