@@ -1,0 +1,11 @@
+
+/* Estilos del apartado proyectos */
+.MainProyectos{
+    font-family: "roboto";
+}
+
+.ListaProyectos{
+    display: flex;
+    flex-direction: column;
+    
+}
