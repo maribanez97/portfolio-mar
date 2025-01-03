@@ -1,46 +1,209 @@
 
-/* Estilos del apartado proyectos */
-.MainProyectos{
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fuentes propias */
+
+@font-face {
+    font-family: "Armany Regular"; /* nombre de la fuente (personalizado) */
+    src: url("../fonts/ARMANY-REGULAR.TTF") format('truetype');
+}
+
+@font-face {
+    font-family: "Armany Medium"; 
+    src: url("../fonts/ARMANY-MEDIUM.TTF") format('truetype');
+}
+
+@font-face {
+    font-family: "Funnel Regular"; 
+    src: url("../fonts/FUNNELDISPLAY-REGULAR.TTF") format('truetype');
+}
+
+@font-face {
+    font-family: "Funnel SemiBold"; 
+    src: url("../fonts/FUNNELDISPLAY-SEMIBOLD.TTF") format('truetype');
+}
+
+/* Definimos colores y fuentes personalizadas */
+:root {
+    --black: #1b1b1b;
+    --white: #fafafa;
+    --font-grafico-regular: 'Armany Regular', serif;
+    --font-grafico-medium: 'Armany Medium', serif;
+    --font-web-regular: 'Funnel Regular', sans-serif;
+    --font-web-semibold: 'Funnel SemiBold', sans-serif;
+}
+
+/* Contenedor principal */
+
+.Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Header {
+    width: 100%;
+    height: 3.8em;
+    padding: 2em 1em 2em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.MarIcon {
+    height: 2em;
+}
+
+.MarIcon-img {
+    height: 100%;  
+}
+
+.BtnsLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3em;
+}
+
+.Btn {
     font-family: "roboto";
-    padding: 4rem 1em;
+    font-weight: 500;
+    font-size: 0.85em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos del apartado proyectos */
+
+.MainProyectos{
+    width: 100%;
+    font-family: "roboto";
+    padding: 4rem 0rem;
 }
 
 .ListaProyectos{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .Proyecto {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .Proyecto-titulo {
-    font-size: 3rem;
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    font-size: 2.9rem;
     color: var(--black);
     font-weight: 300;
 }
 
 .Proyecto-imgs {
-    /* width: 100%; */
+    width: 100%;
+    object-fit: cover;
     display: flex;
     flex-direction: row;
     gap: 0.5em;
-    position: absolute;
-    right: 1em;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.Proyecto-titulo:hover + .Proyecto-imgs {
     opacity: 1;
 }
 
 .Proyecto-img {
-    width: auto;
-    height: 9rem;
+
+    height: 7rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    
+    .ListaProyectos{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .Proyecto {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    
+    .Proyecto-titulo {
+        font-size: 3rem;
+        color: var(--black);
+        font-weight: 300;
+    }
+    
+    .Proyecto-imgs {
+        /* width: 100%; */
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        position: absolute;
+        right: 1em;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    
+    .Proyecto-titulo:hover + .Proyecto-imgs {
+        opacity: 1;
+    }
+    
+    .Proyecto-img {
+        width: auto;
+        height: 9rem;
+    }
+    
+}
+
+/* Estilos footer */
+
+.Footer {
+    width: 100%;
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 0.8em;
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    z-index: 999;
+}
+
+/* Estilo JavaScript */
+
+.u-ocultar {
+    display: none;
+}
+
+.u-seleccionado {
+    border-bottom: 1px solid var(--black);
+    transition: border-bottom 0.5s ease;
 }

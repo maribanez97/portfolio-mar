@@ -1,111 +1,10 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Fuentes propias */
-
-@font-face {
-    font-family: "Armany Regular"; /* nombre de la fuente (personalizado) */
-    src: url("../fonts/ARMANY-REGULAR.TTF") format('truetype');
-}
-
-@font-face {
-    font-family: "Armany Medium"; 
-    src: url("../fonts/ARMANY-MEDIUM.TTF") format('truetype');
-}
-
-@font-face {
-    font-family: "Funnel Regular"; 
-    src: url("../fonts/FUNNELDISPLAY-REGULAR.TTF") format('truetype');
-}
-
-@font-face {
-    font-family: "Funnel SemiBold"; 
-    src: url("../fonts/FUNNELDISPLAY-SEMIBOLD.TTF") format('truetype');
-}
-
-
-:root {
-    --black: #1b1b1b;
-    --white: #fafafa;
-    --font-graphic-regular: 'Armany Regular', serif;
-    --font-graphic-medium: 'Armany Medium', serif;
-    --font-web-regular: 'Funnel Regular', sans-serif;
-    --font-web-semibold: 'Funnel SemiBold', sans-serif;
-}
-
-/* Grid principal */
-
-.Container {
-    font-family: var(--font-graphic-regular);
-    width: 100vw;
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    /* position: relative; */
-    /* padding: 0 2em; */
-    /* background-image: url(../imgs/fondo-mobile-principal.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed; Deja el fondo fijo al hacer scroll */
-}
-
-.Header {
-    width: 100%;
-    height: 3.8em;
-    padding: 2em 1em 2em 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-}
-
-.MarIcon {
-    height: 2em;
-}
-
-.MarIcon-img {
-    height: 100%;  
-}
-
-.BtnsLayout {
-    display: flex;
-    flex-direction: row;
-    gap: 1.3em;
-}
-
-.Btn {
-    font-family: "roboto";
-    font-weight: 500;
-    font-size: 0.85em;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-
-
-/* Layout proyectos Diseño Gráfico */
+/* Layout proyectos Diseño Gráfico
 
 .Section-graphic {
     font-size: 1.5em;
     width: 100%;
-    /* height: 50em; */
+    /* height: 50em; 
     padding: 3rem 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -165,12 +64,12 @@ a {
 
 
 
-/* Layout proyectos Diseño Web */
+/* Layout proyectos Diseño Web 
 
 .Section-web {
     font-size: 1.5em;
     width: 100%;
-    /* height: 50em; */
+    /* height: 50em; 
     padding: 3rem 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -203,75 +102,6 @@ a {
 
 .ImgMusic {
     background-image: url(../imgs/grid-pd.jpg);
-}
+} */
 
 
-.Footer {
-    font-family: "roboto";
-    font-weight: 500;
-    font-size: 0.8em;
-    width: 100%;
-    height: 1.8em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-
-
-/* Estilos del Menu */
-
-.Blur {
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(8px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.Menu { 
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    padding: 3.5em 1.5em;
-    color: var(--white);
-    background-color: var(--black);
-    border-radius: 0.5em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-
-.Menu-close {
-    position: absolute;
-    top: 0.8em;
-    right: 0.8em;
-    cursor: pointer;
-}
-
-.Menu-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.7em;
-}
-
-.Menu-item {
-    font-size: 2em;
-    cursor: pointer;
-}
-
-/* Estilo JavaScript */
-
-.u-hide {
-    display: none;
-}
-
-.u-selection {
-    border-bottom: 1px solid var(--black);
-    transition: border-bottom 0.5s ease;
-}

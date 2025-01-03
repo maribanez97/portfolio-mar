@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mar Ibáñez - PORTFOLIO</title>
+    <title>Mar Ibáñez - PROYECTOS</title>
 
     <meta name="description"
         content="Porfolio de trabajos donde se muestran dos facetas de mi trabajo: diseño web y diseño gráfico.">
@@ -16,10 +16,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
     <link rel="stylesheet" href="./css/styles-principal.css">
-
-    <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/styles-proyectos.css">
+    <link rel="stylesheet" href="./css/styles-menu.css">
 
 </head>
 
@@ -30,66 +31,39 @@
         <header class="Header">
 
             <div class="MarIcon">
-                <img id="MarIcon-img" src="./imgs/icon-graphic.png" alt="Icono Mar Ibáñez" class="MarIcon-img">
+                <a href="./index.html"><img id="MarIcon-img" src="./imgs/icon-graphic.png" alt="Icono Mar Ibáñez" class="MarIcon-img"></a>
             </div>
             <div class="BtnsLayout">
                 <button id="BtnWeb" class="Btn">WEB</button>
-                <button id="BtnGrafico" class="Btn u-selection">GRÁFICO</button>
+                <button id="BtnGrafico" class="Btn">GRÁFICO</button>
                 <button id="BtnMenu" class="Btn">MENU</button>
             </div>
 
         </header>
 
-        <div id="Menu" class="Blur u-hide">
+        <div id="Menu" class="Blur u-ocultar">
             <nav class="Menu">
-                <span id="Menu-close" class="Menu-close material-symbols-outlined">close</span>
+                <span id="Menu-cerrar" class="Menu-cerrar material-symbols-outlined">close</span>
                 <ul class="Menu-list">
-                    <li class="Menu-item"><a href="./proyectos.html">proyectos.</a></li>
+                    <li class="Menu-item"><a href="./index.html">proyectos.</a></li>
                     <li class="Menu-item"><a href="#">sobre mi.</a></li>
                     <li class="Menu-item"><a href="#">contacto.</a></li>
                 </ul>
             </nav>
         </div>
 
-        <section id="Section-graphic" class="Section-graphic">
-            <div class="Projects-item M-item">
-                <div class="Projects-img ImgM"></div>
-                <h3 class="Projects-title">maquetación</h3>
-            </div>
-            <div class="Projects-item DA-item">
-                <div class="Projects-img ImgDA"></div>
-                <h3 class="Projects-title">dirección de arte</h3>
-            </div>
-            <div class="Projects-item PD-item">
-                <div class="Projects-img ImgPD"></div>
-                <h3 class="Projects-title">publicidad RRSS</h3>
-            </div>
-            <div class="Projects-item DP-item">
-                <div class="Projects-img ImgDP"></div>
-                <h3 class="Projects-title">vídeo</h3>
-            </div>
-        </section>
-
-        <section id="Section-web" class="Section-web u-hide">
-            <div class="Projects-item SOS-item">
-                <div class="Projects-img ImgSOS"></div>
-                <h3 class="Projects-title">SOS 360</h3>
-            </div>
-            <div class="Projects-item Chef-item">
-                <div class="Projects-img ImgChef"></div>
-                <h3 class="Projects-title">chef-connect</h3>
-            </div>
-            <div class="Projects-item Music-item">
-                <div class="Projects-img ImgMusic"></div>
-                <h3 class="Projects-title">play music</h3>
-            </div>
-        </section>
+        <main class="MainProyectos">
+            <ul id="ListaProyectos" class="ListaProyectos">
+                
+            </ul>
+        </main>
 
         <footer class="Footer">
             <p class="Footer-text">© 2025 Mar Ibáñez</p>
         </footer>
+
     </div>
 
-</body>
+    <script defer src="./js/script.js"></script>
 
-</html>
+</body>
