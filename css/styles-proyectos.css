@@ -53,6 +53,7 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: var(--white);
 }
 
 .Header {
@@ -65,7 +66,9 @@ a {
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 999;
+    background-color: var(--black);
+    background: transparent; /* Fondo transparente */
+    z-index: 10;
 }
 
 .MarIcon {
@@ -73,7 +76,7 @@ a {
 }
 
 .MarIcon-img {
-    height: 100%;  
+    height: 100%;
 }
 
 .BtnsLayout {
@@ -89,6 +92,8 @@ a {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: var(--white);
+    mix-blend-mode: difference;
 }
 
 /* Estilos del apartado proyectos */
@@ -183,10 +188,6 @@ a {
 
 .Footer {
     width: 100%;
-    font-family: "roboto";
-    font-weight: 500;
-    font-size: 0.8em;
-    width: 100%;
     height: 1.8em;
     display: flex;
     flex-direction: row;
@@ -194,7 +195,19 @@ a {
     position: fixed;
     bottom: 1em;
     left: 1em;
-    z-index: 999;
+    background: transparent; /* Fondo transparente */
+    z-index: 10;
+}
+
+.Footer-text {
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 0.8em;
+    color: var(--white);
+}
+
+.Footer .Footer-text {
+    mix-blend-mode: difference;
 }
 
 /* Estilo JavaScript */
