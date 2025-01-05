@@ -53,7 +53,7 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: white;
 }
 
 .Header {
@@ -68,15 +68,20 @@ a {
     top: 0;
     background-color: var(--black);
     background: transparent; /* Fondo transparente */
+    mix-blend-mode: difference;
     z-index: 10;
 }
 
 .MarIcon {
     height: 2em;
+    background-color: transparent;
+    mix-blend-mode: difference;
 }
 
 .MarIcon-img {
     height: 100%;
+    background-color: transparent; /* Fondo transparente */
+    mix-blend-mode: difference;
 }
 
 .BtnsLayout {
@@ -87,7 +92,8 @@ a {
 
 .Btn {
     font-family: "roboto";
-    font-weight: 500;
+    letter-spacing: 0.1em; /* Añadir interletrado */
+    font-weight: 300;
     font-size: 0.85em;
     background-color: transparent;
     border: none;
@@ -196,19 +202,19 @@ a {
     bottom: 1em;
     left: 1em;
     background: transparent; /* Fondo transparente */
+    mix-blend-mode: difference;
     z-index: 10;
 }
 
 .Footer-text {
     font-family: "roboto";
-    font-weight: 500;
-    font-size: 0.8em;
+    letter-spacing: 0.1em; /* Añadir interletrado */
+    font-weight: 300;
+    font-size: 0.85em;
     color: var(--white);
-}
-
-.Footer .Footer-text {
     mix-blend-mode: difference;
 }
+
 
 /* Estilo JavaScript */
 
@@ -217,6 +223,6 @@ a {
 }
 
 .u-seleccionado {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--white);
     transition: border-bottom 0.5s ease;
 }
