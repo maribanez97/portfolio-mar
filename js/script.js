@@ -18,7 +18,7 @@ const proyectos = [
    { 
     titulo: "Wabi Home",
     tema: "grafico",
-    imagen1:"grid-da-lamparas.jpg",
+    imagen1:"grid-m-catalogo.jpg",
     alt1:"Proyecto 1.1",
     imagen2:"grid-da-comedor.jpg",
     alt2:"Proyecto 1.2"
@@ -28,8 +28,10 @@ const proyectos = [
     tema: "grafico",
     imagen1:"grid-dp-cuadros.jpg",
     alt1:"Proyecto 2.1",
-    imagen2:"grid-da-comedor.jpg",
-    alt2:"Proyecto 2.2"
+    imagen2:"grid-dp-cuadros-2.jpg",
+    alt2:"Proyecto 2.2",
+    imagen3:"grid-dp-cuadros-3.jpg",
+    alt3:"Proyecto 2.3"
    },
    { 
     titulo: "Real Refresh",
@@ -60,7 +62,7 @@ const proyectos = [
     tema: "grafico",
     imagen1:"tu-compartes.png",
     alt1:"Proyecto 6.1",
-    video:"https://www-ccv.adobe.io/v1/player/ccv/QTBdbtYN6PN/embed?api_key=behance1&bgcolor=%23191919"
+    video:"https://player.vimeo.com/video/524801664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
    },
    { 
     titulo: "SOS360",
@@ -73,9 +75,9 @@ const proyectos = [
    { 
     titulo: "Control Time",
     tema: "grafico",
-    imagen1:"grid-da-lamparas.jpg",
+    imagen1:"control-time-1.jpg",
     alt1:"Proyecto 8.1",
-    imagen2:"grid-da-comedor.jpg",
+    imagen2:"control-time-2.png",
     alt2:"Proyecto 8.2"
    }
 ];
@@ -114,33 +116,46 @@ function imprimirProyectos(proyectos){
     ulProyectos.innerHTML = "";
 
     proyectos.forEach((proyecto) => {
-        let titulo = proyecto.titulo;
+        let titulo = proyecto.titulo.toUpperCase();
         let imagen1 = proyecto.imagen1;
         let alt1 = proyecto.alt1;
         let imagen2 = proyecto.imagen2;
         let alt2 = proyecto.alt2;
+        let imagen3 = proyecto.imagen3;
+        let alt3 = proyecto.alt3;
         let video = proyecto.video;
         console.log(proyecto)
-        
+
         // Añadir videos en los proyectos que lo requieren
         if (video){
             ulProyectos.innerHTML += `<li class="Proyecto">
-                                    <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
-                                    <div class="Proyecto-imgs">
-                                        <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
-                                        <video class="Proyecto-img" controls loop muted>
-                                            <source src="${video}" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </li>`
+                                        <div class="Proyecto-imgs">
+                                            <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
+                                            <video class="Proyecto-img" autoplay muted loop>
+                                                <source src="${video}" type="video/webm">
+                                            </video>
+                                        </div>
+                                        <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
+                                     </li>`
         } else {
-            ulProyectos.innerHTML += `<li class="Proyecto">
-                                    <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
-                                    <div class="Proyecto-imgs">
-                                        <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
-                                        <img class="Proyecto-img" src="./imgs/${imagen2}" alt="${alt2}">
-                                    </div>
-                                </li>`
+            if (imagen3) { 
+                ulProyectos.innerHTML += `<li class="Proyecto">
+                                            <div class="Proyecto-imgs">
+                                                <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
+                                                <img class="Proyecto-img" src="./imgs/${imagen2}" alt="${alt2}">
+                                                <img class="Proyecto-img" src="./imgs/${imagen3}" alt="${alt3}">
+                                            </div>
+                                            <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
+                                         </li>`
+            } else {
+                ulProyectos.innerHTML += `<li class="Proyecto">
+                                            <div class="Proyecto-imgs">
+                                                <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
+                                                <img class="Proyecto-img" src="./imgs/${imagen2}" alt="${alt2}">
+                                            </div>
+                                            <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
+                                         </li>`
+            }
         }
     });
 
