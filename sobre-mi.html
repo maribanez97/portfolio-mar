@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"/>
-    <link rel="stylesheet" href="./css/styles-principal.css">
+    <link rel="stylesheet" href="./css/styles-proyectos.css">
     <link rel="stylesheet" href="./css/styles-menu.css">
 
     <script defer src="./js/script.js"></script>
@@ -31,35 +31,40 @@
         <header class="Header">
 
             <div class="MarIcon">
-                <img id="MarIcon-img" src="./imgs/icon-graphic.png" alt="Icono Mar Ibáñez" class="MarIcon-img">
+                <a href="./index.html"><img id="MarIcon-img" src="./imgs/icon-graphic-blanco.png" alt="Icono Mar Ibáñez" class="MarIcon-img"></a>
             </div>
             <div class="BtnsLayout">
                 <button id="BtnWeb" class="Btn">WEB</button>
-                <button id="BtnGrafico" class="Btn u-selection">GRÁFICO</button>
+                <button id="BtnGrafico" class="Btn">GRÁFICO</button>
                 <button id="BtnMenu" class="Btn">MENU</button>
             </div>
 
         </header>
 
-        <div id="Menu" class="Blur u-hide">
+        <div id="Menu" class="Blur u-ocultar">
             <nav class="Menu">
-                <span id="Menu-close" class="Menu-close material-symbols-outlined">close</span>
+                <span id="Menu-cerrar" class="Menu-cerrar material-symbols-outlined">close</span>
                 <ul class="Menu-list">
-                    <li class="Menu-item"><a href="./proyectos.html">proyectos.</a></li>
-                    <li class="Menu-item"><a href="#">sobre mi.</a></li>
+                    <li class="Menu-item"><a href="./index.html">proyectos.</a></li>
+                    <li class="Menu-item"><a href="./sobre-mi.html">sobre mi.</a></li>
                     <li class="Menu-item"><a href="#">contacto.</a></li>
                 </ul>
             </nav>
         </div>
 
-        <main class="SobreMi">
-
+        <main class="Main">
+           
         </main>
 
-        <footer class="Footer">
-            <p class="Footer-text">© 2025 Mar Ibáñez</p>
+        <footer id="Footer" class="Footer">
+            <p id="Footer-text" class="Footer-text">© 2025 Mar Ibáñez</p>
+            <!-- <div id="OscuroClaro" class="OscuroClaro">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-regular fa-circle"></i>
+            </div> -->
         </footer>
-    </div>
+
+    <script defer src="./js/script.js"></script>
 
 </body>
 

@@ -2,18 +2,18 @@
 // 1. Constantes y variables
 //-----------------------------------
 
-// const Container = document.getElementById("Container");
-// const imgMarIcon = document.getElementById("MarIcon-img"); 
+// const container = document.getElementById("Container");
+// const btn = document.getElementById("btn");
 const btnMenu = document.getElementById("BtnMenu");
 const divMenu = document.getElementById("Menu");
 const cerrarMenu = document.getElementById("Menu-cerrar");
 const btnWeb = document.getElementById("BtnWeb");
 const btnGrafico = document.getElementById("BtnGrafico");
-// const seccionGrafico = document.getElementById("Section-graphic");
-// const seccionWeb = document.getElementById("Section-web");
 const ulProyectos = document.getElementById("ListaProyectos");
 const tituloProyecto = document.getElementById("Proyecto-titulo");
-
+// const footer = document.getElementById("Footer")
+// const oscuroClaro = document.getElementById("OscuroClaro")
+// Creación de un array de objetos para que los proyectos secreen mediante JavaScript
 const proyectos = [
    { 
     titulo: "Wabi Home",
@@ -81,28 +81,6 @@ const proyectos = [
     alt2:"Proyecto 8.2"
    }
 ];
-
-
-// Cambio estilos y layout al clicar sobre el boton WEB
-// btnWeb.addEventListener('click',() => {
-//     Container.style.fontFamily = 'var(--font-web-regular)';
-//     imgMarIcon.src = './imgs/icon-web.png';
-//     seccionGrafico.classList.add('u-hide');
-//     seccionWeb.classList.remove('u-hide');
-//     btnGrafico.classList.remove('u-selection');
-//     btnWeb.classList.add('u-selection');
-   
-// });
-
-// Cambio estilos y layout al clicar sobre el boton WEB
-// btnGrafico.addEventListener('click',() => {
-//     Container.style.fontFamily = 'var(--font-graphic-regular)';
-//     imgMarIcon.src = './imgs/icon-graphic.png';
-//     seccionWeb.classList.add('u-hide');
-//     seccionGrafico.classList.remove('u-hide');
-//     btnWeb.classList.remove('u-selection');
-//     btnGrafico.classList.add('u-selection');
-// });
 
 
 //----------------------------------
@@ -179,6 +157,18 @@ function mostrarProyectosGrafico(){
     imprimirProyectos(proyectosGrafico);
 };
 
+//función para cambio de de Modo de Claro a Oscuro y viceversa
+// function modoOscuroClaro(){
+//     const html = document.documentElement;
+
+//     html.style.setProperty('--principal-color','#fff');
+//     html.style.setProperty('--secundario-color','#000');
+//     // container.style.backgroundColor = 'background-color = var(--principal-color);';
+//     // btn.style.color  = 'color: var(--principal-color);';
+//     // tituloProyecto.style.color = 'color: var(--secundario-color);';
+//     // footer.style.color = 'color: var(--principal-color);';
+// }
+
 
 
 //----------------------------------
@@ -211,6 +201,11 @@ cerrarMenu.addEventListener('click',() => {
     divMenu.classList.toggle("u-ocultar");
     console.log("Cerrar");
 });
+
+// oscuroClaro.addEventListener('click', () => {
+//     modoOscuroClaro();
+//     // btn.style.color  = 'color: var(--principal-color);';
+// });
 
 
 
