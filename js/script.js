@@ -2,7 +2,8 @@
 // 1. Constantes y variables
 //-----------------------------------
 
-// const container = document.getElementById("Container");
+const preloader = document.getElementById("Preloader");
+const container = document.getElementById("Container");
 // const btn = document.getElementById("btn");
 const btnMenu = document.getElementById("BtnMenu");
 const divMenu = document.getElementById("Menu");
@@ -116,12 +117,11 @@ function imprimirProyectos(proyectos){
                                         <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
                                      </li>`
         } else {
-            if (imagen3) { 
+            if (imagen2) { 
                 ulProyectos.innerHTML += `<li class="Proyecto">
                                             <div class="Proyecto-imgs">
-                                                <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
-                                                <img class="Proyecto-img" src="./imgs/${imagen2}" alt="${alt2}">
-                                                <img class="Proyecto-img" src="./imgs/${imagen3}" alt="${alt3}">
+                                                <img class="Proyecto-img Proyecto-imgPrincipal" src="./imgs/${imagen1}" alt="${alt1}">
+                                                <img class="Proyecto-img Proyecto-imgSecundaria" src="./imgs/${imagen2}" alt="${alt2}">
                                             </div>
                                             <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
                                          </li>`
@@ -129,12 +129,18 @@ function imprimirProyectos(proyectos){
                 ulProyectos.innerHTML += `<li class="Proyecto">
                                             <div class="Proyecto-imgs">
                                                 <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
-                                                <img class="Proyecto-img" src="./imgs/${imagen2}" alt="${alt2}">
                                             </div>
                                             <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
                                          </li>`
             }
         }
+
+        // ulProyectos.innerHTML += `<li class="Proyecto">
+        //                                     <div class="Proyecto-imgs">
+        //                                         <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
+        //                                     </div>
+        //                                     <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
+        //                                  </li>`
     });
 
 };
@@ -175,18 +181,32 @@ function mostrarProyectosGrafico(){
 // 3. EventListeners
 //----------------------------------
 
+// Ocultar el preloader cuando la página ha cargado
+// Añadimos unevento de carga atoda la ventana del DOM
+window.addEventListener('load',() => {
+     // Oculta el preloader con una pequeña transición
+  preloader.classList.add('u-opacidad');
+
+  // 4s despues de la transición, eliminamos el preloader del DOM
+  setTimeout(() => {
+    preloader.classList.add('u-ocultar');
+    container.classList.remove('u-ocultar');
+  }, 2500);
+});
+
+
 // Llamamos a la función mostrarProyectosWeb al clicar sobre el boton WEB
 btnWeb.addEventListener('click',() => {
-    btnGrafico.classList.remove('u-seleccionado');
-    btnWeb.classList.add('u-seleccionado');
+    btnGrafico.classList.remove('isSeleccionado');
+    btnWeb.classList.add('isSeleccionado');
     // ulProyectos.style.fontFamily = 'var(--font-web-regular)';
     mostrarProyectosWeb();  
 });
 
 // Llamamos a la función mostrarProyectosGrafico al clicar sobre el boton GRÁFICO
 btnGrafico.addEventListener('click',() => {
-    btnWeb.classList.remove('u-seleccionado');
-    btnGrafico.classList.add('u-seleccionado');
+    btnWeb.classList.remove('isSeleccionado');
+    btnGrafico.classList.add('isSeleccionado');
     // ulProyectos.style.fontFamily = 'var(--font-grafico-regular)';
     mostrarProyectosGrafico();  
 });
