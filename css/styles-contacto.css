@@ -1,0 +1,33 @@
+
+.ContenedorFormulario {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Formulario {
+    width: 20rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2.5rem;
+    background-color: var(--principal-color);
+
+}
+
+.Formulario-item {
+    color: var(--secundario-color);
+    font-size: 1em; 
+    padding-top: 0.8em;  
+}
+
+.Formulario-input {
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid white;
+    background:transparent;
+    margin-top: 0.5rem;
+    color: white;
+}
