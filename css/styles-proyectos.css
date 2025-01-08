@@ -51,16 +51,34 @@ html {
     --font-web-semibold: 'Funnel SemiBold', sans-serif;
 }
 
-/* Página que se ve nada más entrar a la web ("Preloader")*/
+/* Página de espera a la carga del DOM ("Preloader")*/
 .Preloader {
     width: 100vw;
     height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--principal-color);
     opacity: 1;
     z-index: 12;
-    transition: opacity 0.5s ease 2s;
+    transition: opacity 0.5s ease 1s;
 }
 
+.PreloaderImg {
+    width: 50%;
+    animation: scale 3s ease 1s ;
+}
+
+  /* keyframes para animar la escala del objeto. Al inicio tiene tamaño 1/1 y al final 10 veces más grande */
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(10);
+    }
+  } 
 
 /* Contenedor principal */
 
@@ -264,6 +282,10 @@ html {
 
 
 @media screen and (min-width: 768px) {
+    .PreloaderImg {
+        width: 40%;
+    }
+
     .Proyecto-imgSecundaria {
         display: block;
     }
@@ -273,6 +295,10 @@ html {
 
 
 @media screen and (min-width: 1024px) {
+    .PreloaderImg {
+        width: 30%;
+    }
+
     .Header {
         padding: 3em 2em 3em 2em;
     }

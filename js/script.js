@@ -163,6 +163,33 @@ function mostrarProyectosGrafico(){
     imprimirProyectos(proyectosGrafico);
 };
 
+// Muestra ooculta el preloader cuando la se carga
+function mostrarPreloader() { 
+    // Verifica si el preloader ya se ejecutó
+    const preloaderShown = sessionStorage.getItem("preloaderShown");
+
+    if (preloaderShown) {
+        // Si ya se ejecutó, oculta el preloader y muestra el contenido
+        preloader.classList.add('u-ocultar');
+        container.classList.remove('u-ocultar');
+      } else {
+        // Si no, muestra el preloader y guárdalo en sessionStorage (la sesión actual de la página)
+        // Cuando se vuelve a cargar en otra sesión realiza el preloader.
+        // Ejecuta el preloaded con transición
+        setTimeout(() => {
+            preloader.classList.add('u-opacidad'); // Ejecuta latransición de opacidad
+            // Cuando la transición ya está ejecutada...
+            preloader.addEventListener('transitionend', () => {
+                container.classList.remove('u-ocultar'); // Oculta el preloaded
+                preloader.classList.add('u-ocultar'); // Muestrael contenido
+                // Guarda en el sessionStorage que el preloaded ya se ha mostrado en esta sesión
+                sessionStorage.setItem("preloaderShown", "true");
+            });
+        }, 2000); // El preloaded tarda 1.5s en ejecutarse
+      }
+
+};
+
 //función para cambio de de Modo de Claro a Oscuro y viceversa
 // function modoOscuroClaro(){
 //     const html = document.documentElement;
@@ -181,17 +208,9 @@ function mostrarProyectosGrafico(){
 // 3. EventListeners
 //----------------------------------
 
-// Ocultar el preloader cuando la página ha cargado
-// Añadimos unevento de carga atoda la ventana del DOM
-window.addEventListener('load',() => {
-     // Oculta el preloader con una pequeña transición
-  preloader.classList.add('u-opacidad');
-
-  // 4s despues de la transición, eliminamos el preloader del DOM
-  setTimeout(() => {
-    preloader.classList.add('u-ocultar');
-    container.classList.remove('u-ocultar');
-  }, 2500);
+// Añadimos un evento de carga para toda la ventana del DOM
+document.addEventListener('DOMContentLoaded',() => {
+    mostrarPreloader();
 });
 
 
