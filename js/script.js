@@ -11,7 +11,8 @@ const cerrarMenu = document.getElementById("Menu-cerrar");
 const btnWeb = document.getElementById("BtnWeb");
 const btnGrafico = document.getElementById("BtnGrafico");
 const ulProyectos = document.getElementById("ListaProyectos");
-const tituloProyecto = document.getElementById("Proyecto-titulo");
+const titulosProyecto = document.querySelectorAll(".Proyecto-titulo");
+const imgsProyecto = document.querySelectorAll(".Proyecto-imgs");
 // const footer = document.getElementById("Footer")
 // const oscuroClaro = document.getElementById("OscuroClaro")
 // Creación de un array de objetos para que los proyectos secreen mediante JavaScript
@@ -30,9 +31,7 @@ const proyectos = [
     imagen1:"grid-dp-cuadros.jpg",
     alt1:"Proyecto 2.1",
     imagen2:"grid-dp-cuadros-2.jpg",
-    alt2:"Proyecto 2.2",
-    imagen3:"grid-dp-cuadros-3.jpg",
-    alt3:"Proyecto 2.3"
+    alt2:"Proyecto 2.2"
    },
    { 
     titulo: "Real Refresh",
@@ -88,10 +87,38 @@ const proyectos = [
 // 2. Funciones
 //----------------------------------
 
-// Imprimir el array de proyectos
+// Muestra y oculta el preloader cuando la web se carga
+function mostrarPreloader() { 
+    // definimos la variable para verificar si el preloader ya se ejecutó
+    const preloaderShown = sessionStorage.getItem("preloaderShown");
+
+    if (preloaderShown) {
+        // Si ya se ejecutó, oculta el preloader y muestra el contenido
+        preloader.classList.add('isOculto');
+        container.classList.remove('isOculto');
+      } else {
+        // Si no, muestra el preloader y guárdalo en sessionStorage (la sesión actual de la página)
+        // Cuando se vuelve a cargar en otra sesión realiza el preloader.
+        //Función de callback. Se ejecutan las siguientes acciones 3s después de que inicie nuestro código
+        setTimeout(() => {
+            // Ejecuta el preloaded con un transition de opacidad
+            preloader.classList.add('u-opacidad');
+            // Cuando la transición ya está ejecutada...
+            preloader.addEventListener('transitionend', () => {
+                container.classList.remove('isOculto'); // Oculta el preloaded
+                preloader.classList.add('isOculto'); // Muestra el contenido
+                // Guarda en el sessionStorage que el preloaded ya se ha mostrado en esta sesión
+                sessionStorage.setItem("preloaderShown", "true");
+            }, 3000); 
+            });
+      }
+
+};
+
+// Función para imprimir una lista de proyectos en pantalla
 function imprimirProyectos(proyectos){
     
-    // Limpiar lista de proyectos para no duplicar
+    // Limpiar lista de proyectos para no duplicar cuando se filtra por web o gráfico
     ulProyectos.innerHTML = "";
 
     proyectos.forEach((proyecto) => {
@@ -100,47 +127,30 @@ function imprimirProyectos(proyectos){
         let alt1 = proyecto.alt1;
         let imagen2 = proyecto.imagen2;
         let alt2 = proyecto.alt2;
-        let imagen3 = proyecto.imagen3;
-        let alt3 = proyecto.alt3;
         let video = proyecto.video;
         console.log(proyecto)
 
-        // Añadir videos en los proyectos que lo requieren
+        // Si hay vídeo añadir alproyecto, si no poner las dos imágenes
         if (video){
             ulProyectos.innerHTML += `<li class="Proyecto">
                                         <div class="Proyecto-imgs">
-                                            <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
+                                            <img class="Proyecto-img" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
                                             <video class="Proyecto-img" autoplay muted loop>
                                                 <source src="${video}" type="video/webm">
                                             </video>
                                         </div>
-                                        <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
+                                        <p class="Proyecto-titulo">${titulo}</p>
                                      </li>`
         } else {
-            if (imagen2) { 
                 ulProyectos.innerHTML += `<li class="Proyecto">
                                             <div class="Proyecto-imgs">
-                                                <img class="Proyecto-img Proyecto-imgPrincipal" src="./imgs/${imagen1}" alt="${alt1}">
-                                                <img class="Proyecto-img Proyecto-imgSecundaria" src="./imgs/${imagen2}" alt="${alt2}">
+                                                <img class="Proyecto-img Img--principal" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
+                                                <img class="Proyecto-img Img--secundaria" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
                                             </div>
-                                            <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
+                                            <p class="Proyecto-titulo">${titulo}</p>
                                          </li>`
-            } else {
-                ulProyectos.innerHTML += `<li class="Proyecto">
-                                            <div class="Proyecto-imgs">
-                                                <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
-                                            </div>
-                                            <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
-                                         </li>`
-            }
         }
 
-        // ulProyectos.innerHTML += `<li class="Proyecto">
-        //                                     <div class="Proyecto-imgs">
-        //                                         <img class="Proyecto-img" src="./imgs/${imagen1}" alt="${alt1}">
-        //                                     </div>
-        //                                     <p id="Proyecto-titulo" class="Proyecto-titulo">${titulo}</p>
-        //                                  </li>`
     });
 
 };
@@ -149,7 +159,7 @@ function imprimirProyectos(proyectos){
 function mostrarProyectosWeb(){
 
     const proyectosWeb = proyectos.filter(proyecto => proyecto.tema === "web");
-    console.log(proyectosWeb);
+    // console.log(proyectosWeb);
     // Imprimir solo la lista de proyectos web
     imprimirProyectos(proyectosWeb);
 };
@@ -158,37 +168,12 @@ function mostrarProyectosWeb(){
 function mostrarProyectosGrafico(){
 
     const proyectosGrafico = proyectos.filter(proyecto => proyecto.tema === "grafico");
-    console.log(proyectosGrafico);
+    // console.log(proyectosGrafico);
     // Imprimir solo la lista de proyectos grafico
     imprimirProyectos(proyectosGrafico);
 };
 
-// Muestra ooculta el preloader cuando la se carga
-function mostrarPreloader() { 
-    // Verifica si el preloader ya se ejecutó
-    const preloaderShown = sessionStorage.getItem("preloaderShown");
 
-    if (preloaderShown) {
-        // Si ya se ejecutó, oculta el preloader y muestra el contenido
-        preloader.classList.add('u-ocultar');
-        container.classList.remove('u-ocultar');
-      } else {
-        // Si no, muestra el preloader y guárdalo en sessionStorage (la sesión actual de la página)
-        // Cuando se vuelve a cargar en otra sesión realiza el preloader.
-        // Ejecuta el preloaded con transición
-        setTimeout(() => {
-            preloader.classList.add('u-opacidad'); // Ejecuta latransición de opacidad
-            // Cuando la transición ya está ejecutada...
-            preloader.addEventListener('transitionend', () => {
-                container.classList.remove('u-ocultar'); // Oculta el preloaded
-                preloader.classList.add('u-ocultar'); // Muestrael contenido
-                // Guarda en el sessionStorage que el preloaded ya se ha mostrado en esta sesión
-                sessionStorage.setItem("preloaderShown", "true");
-            });
-        }, 2000); // El preloaded tarda 1.5s en ejecutarse
-      }
-
-};
 
 //función para cambio de de Modo de Claro a Oscuro y viceversa
 // function modoOscuroClaro(){
@@ -213,6 +198,15 @@ document.addEventListener('DOMContentLoaded',() => {
     mostrarPreloader();
 });
 
+// Evento para que al pasar el ratón por los titulos de los proyectos aparezca la imagen
+// titulosProyecto.forEach(titulo => {
+//     titulo.addEventListener('hover', () => {
+//         imgsProyecto.forEach(divImgs => {
+//             divImgs.classList.toggle('u-mostrar');
+//         });
+//     });
+// });
+
 
 // Llamamos a la función mostrarProyectosWeb al clicar sobre el boton WEB
 btnWeb.addEventListener('click',() => {
@@ -232,13 +226,12 @@ btnGrafico.addEventListener('click',() => {
 
 // Abrimos y cerramos el menu al clicar sobre el boton MENU
 btnMenu.addEventListener('click',() => {
-    divMenu.classList.toggle("u-ocultar");
+    divMenu.classList.toggle("isOculto");
 });
 
 // Cerramos el menu al clicar sobre la X
 cerrarMenu.addEventListener('click',() => {
-    divMenu.classList.toggle("u-ocultar");
-    console.log("Cerrar");
+    divMenu.classList.toggle("isOculto");
 });
 
 // oscuroClaro.addEventListener('click', () => {
