@@ -346,6 +346,7 @@ html {
         box-shadow: none;
     }
 
+    /* al hacer hover sobre el titulo aparece la imagen (~ selector de hermanos) */
     .Proyecto-titulo:hover ~ .Proyecto-imgs {
         opacity: 1;
     }
