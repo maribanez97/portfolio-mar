@@ -43,7 +43,7 @@
 
         </header>
 
-        <div id="Menu" class="Blur u-ocultar">
+        <div id="Menu" class="Blur isOculto">
             <nav class="Menu">
                 <span id="Menu-cerrar" class="Menu-cerrar material-symbols-outlined">close</span>
                 <ul class="Menu-list">
@@ -54,22 +54,33 @@
             </nav>
         </div>
 
-        <main class="Main">
+        <main class="Main Main-contacto">
+            <div class="Intro">
+                <h1 class="Intro-titulo">Let's do it</h1>
+                <!-- <p class="Intro-texto">Sólo nos separa un email así que ya sabes...</p> -->
+            </div>
             <div class="ContenedorFormulario">
                 <form class="Formulario" action="" method="get">
-                    <label class="Formulario-item" for="nombre">Nombre</label>
-                    <input class="Formulario-input" id="nombre" type="text" name="nombre" required>
-
-                    <label class="Formulario-item" for="nombreMarca">Nombre de la marca</label>
-                    <input class="Formulario-input" id="nombreMarca" type="text" name="nombreMarca">
-
-                    <label class="Formulario-item" for="email">Email</label>
-                    <input class="Formulario-input" id="email" type="email" name="email" required>
-
-                    <textarea class="Formulario-mensaje" name="Mensaje" id="Mensaje" placeholder="Mensaje" cols="30"
-                        rows="10"></textarea>
+                    <div class="FormularioCaja">
+                        <label class="Formulario-item" for="nombre">NOMBRE</label>
+                        <input class="Formulario-input" id="nombre" type="text" name="nombre" required>
+                    </div>
+                    <div class="FormularioCaja">
+                        <label class="Formulario-item" for="nombreMarca">EMPRESA</label>
+                        <input class="Formulario-input" id="nombreMarca" type="text" name="nombreMarca">
+                    </div>
+                    <div class="FormularioCaja">
+                        <label class="Formulario-item" for="email">EMAIL</label>
+                        <input class="Formulario-input" id="email" type="email" name="email" required>
+                    </div>
+                    <div class="FormularioCaja-mensaje">
+                        <label class="Formulario-item" for="text">MENSAJE</label>
+                        <textarea class="Formulario-input" name="Mensaje" id="Mensaje" cols="30" rows="10"></textarea>
+                    </div>
                 </form>
             </div>
+
+            <div id="clock"></div>
         </main>
 
         <footer id="Footer" class="Footer">

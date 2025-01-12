@@ -165,12 +165,20 @@ html {
     width: 100%;
 }
 
+.u-noHover:hover::after{
+ width: 0;
+}
+
+.Btn-desk {
+    display: none;
+}
+
 
 
 /* Estilos del apartado proyectos */
 .Main {
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: "roboto";
@@ -310,6 +318,14 @@ html {
 
     .Header {
         padding: 3em 2em 3em 2em;
+    }
+
+    .Btn-desk {
+        display: block;
+    }
+
+    .Btn-mobile {
+        display: none;
     }
 
     .MainProyectos {

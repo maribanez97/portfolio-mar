@@ -1,33 +1,83 @@
 
-.ContenedorFormulario {
-    width: 100vw;
+.Intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 0 0 1rem 0;
+}
+
+.Main-contacto {
+    justify-content: center;
+}
+
+.Intro-titulo {
+    font-family: var(--font-grafico-regular);
+    font-size: 5.5em;
+    font-weight: 500;
+}
+
+/* .Intro-texto {
+    font-family: "roboto";
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 60%;
+} */
+
+.ContenedorFormulario {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: var(--principal-color);
 }
 
 .Formulario {
-    width: 20rem;
-    padding: 2rem;
+    font-family: "roboto";
+    width: 100%;
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
-    border-radius: 2.5rem;
-    background-color: var(--principal-color);
+    border: 1px solid var(--principal-color);
+}
 
+.FormularioCaja{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--secundario-color);
+
+}
+
+.FormularioCaja-mensaje {
+    display: flex;
+    flex-direction: column;
 }
 
 .Formulario-item {
+    width: 40%;
+    padding-left: 1rem;
     color: var(--secundario-color);
-    font-size: 1em; 
-    padding-top: 0.8em;  
+    font-size: 0.8em; 
+    padding: 0.8em 0.8em;  
 }
 
 .Formulario-input {
-    height: 2rem;
+    font-family: "roboto";
+    width: 100%;
+    font-size: 1.2em;
+    padding-left: 0.5rem;
     border: none;
-    border-bottom: 1px solid white;
     background:transparent;
-    margin-top: 0.5rem;
-    color: white;
+    color:var(--secundario-color);
+}
+
+.Formulario-input:focus {
+    background-color: var(--secundario-color);
+    color:var(--principal-color);
+    border: none;
+}
+
+.Formulario-item ~ .Formulario-input:focus {
+    color: var(--principal-color);
+    background-color: var(--secundario-color);
+    border: none;
 }

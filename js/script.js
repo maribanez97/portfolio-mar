@@ -5,7 +5,8 @@
 const preloader = document.getElementById("Preloader");
 const container = document.getElementById("Container");
 // const btn = document.getElementById("btn");
-const btnMenu = document.getElementById("BtnMenu");
+const btnMenuMobile = document.getElementById("BtnMenu-mobile");
+const btnMenuDesk = document.getElementById("BtnMenu-desk");
 const divMenu = document.getElementById("Menu");
 const cerrarMenu = document.getElementById("Menu-cerrar");
 const btnWeb = document.getElementById("BtnWeb");
@@ -173,6 +174,16 @@ function mostrarProyectosGrafico(){
     imprimirProyectos(proyectosGrafico);
 };
 
+ // Función para actualizar la hora local de España
+ function mostrarReloj() {
+    // Crear un objeto de fecha con la hora en la zona horaria de España
+    const options = { timeZone: "Europe/Madrid", hour12: false };
+    const now = new Date().toLocaleString("es-ES", options);
+
+    // Mostrar la hora en el div con id "clock"
+    document.getElementById("clock").textContent = now;
+  }
+
 
 
 //función para cambio de de Modo de Claro a Oscuro y viceversa
@@ -225,7 +236,11 @@ btnGrafico.addEventListener('click',() => {
 });
 
 // Abrimos y cerramos el menu al clicar sobre el boton MENU
-btnMenu.addEventListener('click',() => {
+btnMenuMobile.addEventListener('click',() => {
+    divMenu.classList.toggle("isOculto");
+});
+
+btnMenuDesk.addEventListener('click',() => {
     divMenu.classList.toggle("isOculto");
 });
 
@@ -247,3 +262,8 @@ cerrarMenu.addEventListener('click',() => {
 
 // Imprime toda la lista de proyectos al inicializar el programa
 imprimirProyectos(proyectos);
+
+// // Actualizar el reloj cada segundo
+// setInterval(mostrarReloj, 1000);
+// // Llamar a la función inicialmente para evitar el retraso inicial
+// mostrarReloj();
