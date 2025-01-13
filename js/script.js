@@ -267,15 +267,12 @@ cerrarMenu.addEventListener('click',() => {
 // 4. Inicializar nuestro programa
 //----------------------------------
 
-if (rutaActual.includes("index.html")){
     // Imprime toda la lista de proyectos al inicializar el programa si se encuentra en la página index.html
     imprimirProyectos(proyectos);
-}
 
-if (rutaActual.includes("contacto.html")){
+
     mostrarDisponibilidad();
     // Actualizar el reloj cada segundo
     setInterval(mostrarReloj, 1000);
     // Llamar a la función inicialmente para evitar el retraso inicial
     mostrarReloj();
-}
