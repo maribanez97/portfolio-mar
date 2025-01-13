@@ -2,6 +2,8 @@
 // 1. Constantes y variables
 //-----------------------------------
 
+// Verificar la página actual (obtiene la ruta)
+const rutaActual = window.location.pathname; 
 const preloader = document.getElementById("Preloader");
 const container = document.getElementById("Container");
 // const btn = document.getElementById("btn");
@@ -174,14 +176,29 @@ function mostrarProyectosGrafico(){
     imprimirProyectos(proyectosGrafico);
 };
 
- // Función para actualizar la hora local de España
- function mostrarReloj() {
-    // Crear un objeto de fecha con la hora en la zona horaria de España
-    const options = { timeZone: "Europe/Madrid", hour12: false };
-    const now = new Date().toLocaleString("es-ES", options);
+// Función para actualizar la hora local de España
+function mostrarReloj() {
+     // Crear un objeto de fecha con la hora en la zona horaria de España
+     const options = { timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit"};
+     const now = new Date().toLocaleTimeString("es-ES", options);
+        // Mostrar la hora en el div con id "Reloj"
+        document.getElementById("Reloj").textContent = now;
+  }
 
-    // Mostrar la hora en el div con id "clock"
-    document.getElementById("clock").textContent = now;
+  function mostrarDisponibilidad() {
+    const horaInico = 8; // Diponible a partir de las 8:00
+    const horaFinal = 17; // No disponible a partir de las 17:00
+    const now = new Date(); // Objeto con la hora y fecha actuales
+    const horaActual = now.getHours();
+    const circulo = document.getElementById("Icono");
+    const Disponibilidad = document.getElementById("Disponibilidad")
+    Disponibilidad.innerHTML = "No disponible"
+
+    if (horaActual>=horaInico && horaActual<horaFinal){
+        // Mostrar si estoy o no disponible
+        Disponibilidad.innerHTML = "Disponible";
+        circulo.classList.add('u-disponible');
+    }
   }
 
 
@@ -204,20 +221,12 @@ function mostrarProyectosGrafico(){
 // 3. EventListeners
 //----------------------------------
 
-// Añadimos un evento de carga para toda la ventana del DOM
+// Añadimos un evento de carga para toda la ventana del DOM, solo si se encuentra en la página index.html
+if (rutaActual.includes("index.html")){
 document.addEventListener('DOMContentLoaded',() => {
     mostrarPreloader();
 });
-
-// Evento para que al pasar el ratón por los titulos de los proyectos aparezca la imagen
-// titulosProyecto.forEach(titulo => {
-//     titulo.addEventListener('hover', () => {
-//         imgsProyecto.forEach(divImgs => {
-//             divImgs.classList.toggle('u-mostrar');
-//         });
-//     });
-// });
-
+}
 
 // Llamamos a la función mostrarProyectosWeb al clicar sobre el boton WEB
 btnWeb.addEventListener('click',() => {
@@ -260,10 +269,15 @@ cerrarMenu.addEventListener('click',() => {
 // 4. Inicializar nuestro programa
 //----------------------------------
 
-// Imprime toda la lista de proyectos al inicializar el programa
-imprimirProyectos(proyectos);
+if (rutaActual.includes("index.html")){
+    // Imprime toda la lista de proyectos al inicializar el programa si se encuentra en la página index.html
+    imprimirProyectos(proyectos);
+}
 
-// // Actualizar el reloj cada segundo
-// setInterval(mostrarReloj, 1000);
-// // Llamar a la función inicialmente para evitar el retraso inicial
-// mostrarReloj();
+if (rutaActual.includes("contacto.html")){
+    mostrarDisponibilidad();
+    // Actualizar el reloj cada segundo
+    setInterval(mostrarReloj, 1000);
+    // Llamar a la función inicialmente para evitar el retraso inicial
+    mostrarReloj();
+}

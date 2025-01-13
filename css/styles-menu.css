@@ -3,32 +3,44 @@
 .Blur {
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(8px);
+    padding: 0 1rem;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999;
+    z-index: 20;
 }
 
+
 .Menu { 
-    width: 60vw;
+    height:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3.5em 1.5em;
-    color: var(--secundario-color);
+    padding: 3em 1rem;
     background-color: var(--principal-color);
-    border-radius: 0.5em;
+    color: var(--secundario-color);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
+    left: 0;
+    animation: menu 1s ease-in;
+}
+
+@keyframes menu {
+    0% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .Menu-cerrar {
+    font-size: 3em;
     position: absolute;
-    top: 0.8em;
-    right: 0.8em;
+    top: 1rem;
+    right: 0;
     cursor: pointer;
 }
 
@@ -36,26 +48,46 @@
     font-family: var(--font-grafico-regular);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.7em;
+    flex: 1;
+    gap: 1em;
 }
 
 .Menu-item {
-    font-size: 2em;
+    font-size: 4.5em;
     cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
-    .Menu { 
-        width: 30vw;
-        padding: 7em 1.5em;   
+.ListaRRSS {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.ListaRRSS-item {
+    cursor: pointer;
+    color: var(--secundario-color);
+    font-family: "roboto";
+}
+
+@media screen and (min-width: 768px) {
+
+    .Menu-item {
+        font-size: 7em;
     }
 
     .Menu-list {
         gap: 1.5em;
     }
 
-    .Menu-item {
-        font-size: 2.5em;
+    .ListaRRSS {
+        justify-content: end;
+        gap: 3rem;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .Menu { 
+        padding: 3em 1.5em;   
+    }
+}
+

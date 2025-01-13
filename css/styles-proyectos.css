@@ -173,6 +173,10 @@ html {
     display: none;
 }
 
+.material-symbols-outlined {
+    font-weight: 100;
+}
+
 
 
 /* Estilos del apartado proyectos */
