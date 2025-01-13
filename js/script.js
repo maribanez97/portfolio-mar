@@ -221,12 +221,10 @@ function mostrarReloj() {
 // 3. EventListeners
 //----------------------------------
 
-// Añadimos un evento de carga para toda la ventana del DOM, solo si se encuentra en la página index.html
-if (rutaActual.includes("index.html")){
+// Añadimos un evento de carga para toda la ventana del DOM
 document.addEventListener('DOMContentLoaded',() => {
     mostrarPreloader();
 });
-}
 
 // Llamamos a la función mostrarProyectosWeb al clicar sobre el boton WEB
 btnWeb.addEventListener('click',() => {
