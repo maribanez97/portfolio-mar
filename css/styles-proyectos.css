@@ -131,6 +131,7 @@ html {
 .Btn {
     /* El botón ajusta su tamaño al contenido */
     display: inline-block;
+    height: 1.2em;
     /* Para posicionar el pseudo-elemento con position absolute*/
     position: relative;
     font-family: "roboto";
@@ -254,7 +255,7 @@ html {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    bottom: 1em;
+    bottom: 0.2em;
     left: 1em;
     color: var(--secundario-color);
     background: transparent;
