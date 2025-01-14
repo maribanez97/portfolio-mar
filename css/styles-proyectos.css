@@ -125,16 +125,16 @@ html {
 .BtnsLayout {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1.3em;
 }
 
 .Btn {
     /* El botón ajusta su tamaño al contenido */
     display: inline-block;
-    height: 1.2em;
     /* Para posicionar el pseudo-elemento con position absolute*/
     position: relative;
-    font-family: "roboto";
+    font-family: "roboto",sans-serif;
     /* Interletrado */
     letter-spacing: 0.1em;
     font-weight: 300;
@@ -186,7 +186,7 @@ html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: "roboto";
+    font-family: "roboto",sans-serif;
     padding: 5rem 0 3rem 0;
     background-color: var(--secundario-color);
 }
@@ -265,10 +265,10 @@ html {
 }
 
 .Footer-text {
-    font-family: "roboto";
+    font-family: "roboto",sans-serif;
     letter-spacing: 0.1em;
     /* Añadir interletrado */
-    font-weight: 300;
+    font-weight: 200;
     font-size: 0.85em;
 }
 

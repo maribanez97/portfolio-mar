@@ -1,0 +1,18 @@
+
+.SobreMi {
+    padding: 1rem;
+}
+
+.SobreMi-titulo {
+    padding: 2rem 0;
+    font-family: var(--font-grafico-regular);
+    font-size: 4.5em;
+    font-weight: 300;
+}
+
+.SobreMi-texto {
+    padding: 1.5rem 0;
+    font-size: 1.5em;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+}
