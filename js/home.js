@@ -61,21 +61,25 @@ function imprimirProyectos(proyectos){
         // Si hay vídeo añadir alproyecto, si no poner las dos imágenes
         if (video){
             ulProyectos.innerHTML += `<li class="Proyecto">
-                                        <h3 class="Proyecto-titulo">${titulo}</h3>
-                                        <div class="Proyecto-imgs">
-                                            <img class="Proyecto-img" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
-                                            <video class="Proyecto-img" autoplay muted loop>
-                                                <source src="${video}" type="video/webm">
-                                            </video>
-                                        </div>
+                                        <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
+                                            <h3 class="Proyecto-titulo">${titulo}</h3>
+                                            <div class="Proyecto-imgs">
+                                                <img class="Proyecto-img" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
+                                                <video class="Proyecto-img" autoplay muted loop>
+                                                    <source src="${video}" type="video/webm">
+                                                </video>
+                                            </div>
+                                        </a>
                                      </li>`
         } else {
                 ulProyectos.innerHTML += `<li class="Proyecto">
-                                            <h3 class="Proyecto-titulo">${titulo}</h3>
-                                            <div class="Proyecto-imgs">
-                                                <img class="Proyecto-img Img--principal" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
-                                                <img class="Proyecto-img Img--secundaria" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
-                                            </div>
+                                            <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
+                                                <h3 class="Proyecto-titulo">${titulo}</h3>
+                                                <div class="Proyecto-imgs">
+                                                    <img class="Proyecto-img Img--principal" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
+                                                    <img class="Proyecto-img Img--secundaria" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
+                                                </div>
+                                            </a>
                                          </li>`
         }
 

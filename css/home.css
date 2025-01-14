@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-ul {
+.EstiloLista {
     list-style: none;
 }
 
-a {
+.EstiloAnchor {
     text-decoration: none;
     color: inherit;
 }
@@ -205,8 +205,13 @@ html {
     justify-content: space-between;
 }
 
+.Proyecto-enlace {
+    display: flex;
+    flex-direction: column;
+}
+
 .Proyecto-titulo {
-    order: 2;
+    order: 1;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1.2rem;
     color: var(--principal-color);
@@ -218,7 +223,7 @@ html {
     height: 20em;
     display: flex;
     flex-direction: row;
-    order: 1;
+    order: 0;
     overflow: hidden;
     opacity: 1;
     transition: box-shadow 0.5s ease;

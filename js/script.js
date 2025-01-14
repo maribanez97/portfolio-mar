@@ -12,15 +12,21 @@ const cerrarMenu = document.getElementById("Menu-cerrar");
 // Creación de un array de objetos para que los proyectos se creen mediante JavaScript
 const proyectos = [
     { 
+     id: 1,
      titulo: "Wabi Home",
+     año: "2021 - 2024",
+     servicios: "Dirección de arte",
      tema: "grafico",
      imagen1:"grid-m-catalogo.jpg",
      alt1:"Proyecto 1.1",
      imagen2:"grid-da-comedor.jpg",
      alt2:"Proyecto 1.2"
     },
-    { 
+    {
+     id: 2, 
      titulo: "Cadal y Lade",
+     año: "2023",
+     servicios: "Diseño de producto",
      tema: "grafico",
      imagen1:"grid-dp-cuadros.jpg",
      alt1:"Proyecto 2.1",
@@ -28,7 +34,10 @@ const proyectos = [
      alt2:"Proyecto 2.2"
     },
     { 
+     id: 3,
      titulo: "Real Refresh",
+     año: "2021",
+     servicios: "After Effects",
      tema: "grafico",
      imagen1:"real-refresh.png",
      alt1:"Proyecto 3.1",
@@ -36,7 +45,10 @@ const proyectos = [
      alt2:"Proyecto 3.2"
     },
     { 
+     id: 4,
      titulo: "Reproductor",
+     año: "2024",
+     servicios: "HTML, CSS y JavaScript",
      tema: "web",
      imagen1:"grid-da-lamparas.jpg",
      alt1:"Proyecto 4.1",
@@ -44,7 +56,10 @@ const proyectos = [
      alt2:"Proyecto 4.2",
     },
     { 
+     id: 5,
      titulo: "Chef-Connect",
+     año: "2024",
+     servicios: "HTML, CSS y JavaScript",
      tema: "web",
      imagen1:"grid-da-lamparas.jpg",
      alt1:"Proyecto 5.1",
@@ -52,22 +67,31 @@ const proyectos = [
      alt2:"Proyecto 5.2"
     },
     { 
+     id: 6,
      titulo: "Tu compartes, ellos también",
+     año: "2019",
+     servicios: "Photoshop, Illustrator, InDesign",
      tema: "grafico",
      imagen1:"tu-compartes.png",
      alt1:"Proyecto 6.1",
      video:"https://player.vimeo.com/video/524801664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     { 
+     id: 7,
      titulo: "SOS360",
+     año: "2024",
+     servicios: "HTML, CSS y JavaScript",
      tema: "web",
      imagen1:"grid-da-lamparas.jpg",
      alt1:"Proyecto 7.1",
      imagen2:"grid-da-comedor.jpg",
      alt2:"Proyecto 7.2"
     },
-    { 
+    {
+     id: 8,
      titulo: "Control Time",
+     año: "2019",
+     servicios: "Photoshop, Illustrator, InDesign",
      tema: "grafico",
      imagen1:"control-time-1.jpg",
      alt1:"Proyecto 8.1",

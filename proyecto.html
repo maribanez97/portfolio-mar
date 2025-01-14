@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mar Ibáñez - CONTACTO</title>
+    <title>Mar Ibáñez - PROYECTOS</title>
 
     <meta name="description"
-        content="Formulario de contacto de Mar Ibáñez Aguilar">
-    <meta name="keyword" content="diseño web, diseño gráfico, Mar Ibáñez, email, contacto ">
+        content="Porfolio de trabajos donde se muestran dos facetas de mi trabajo: diseño web y diseño gráfico.">
+    <meta name="keyword" content="diseño web, diseño gráfico, Mar Ibáñez, portfolio, web ">
     <meta name="author" content="Mar Ibáñez">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +18,13 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/proyecto.css">
 
     <script defer src="./js/script.js"></script>
-    <script defer src="./js/contacto.js"></script>
+    <script defer src="./js/proyecto.js"></script>
 
 </head>
 
@@ -35,12 +35,12 @@
         <header class="Header">
 
             <div class="MarIcon">
-                <a class="EstiloAnchor" href="./index.html"><img id="MarIcon-img" src="./imgs/icon-graphic-blanco.png" alt="Icono Mar Ibáñez" class="MarIcon-img"></a>
+                <a href="./index.html"><img id="MarIcon-img" src="./imgs/icon-graphic-blanco.png" alt="Icono Mar Ibáñez" class="MarIcon-img"></a>
             </div>
             <div class="BtnsLayout">
                 <button id="BtnMenu-mobile" class="Btn Btn-mobile u-noHover"><span class="material-symbols-outlined">
                     menu
-                    </span></button>
+                </span></button>
                 <button id="BtnMenu-desk" class="Btn Btn-desk">MENÚ</button>
             </div>
 
@@ -64,38 +64,8 @@
             </nav>
         </div>
 
-        <main class="Main Main-contacto">
-                <h1 class="Titulo">let's do it</h1>
-            <div class="ContenedorFormulario">
-                <form class="Formulario" action="" method="get">
-                    <div class="FormularioCaja">
-                        <label class="Formulario-item" for="nombre">NOMBRE</label>
-                        <input class="Formulario-input" id="nombre" type="text" name="nombre" required>
-                    </div>
-                    <div class="FormularioCaja">
-                        <label class="Formulario-item" for="nombreMarca">EMPRESA</label>
-                        <input class="Formulario-input" id="nombreMarca" type="text" name="nombreMarca">
-                    </div>
-                    <div class="FormularioCaja">
-                        <label class="Formulario-item" for="email">EMAIL</label>
-                        <input class="Formulario-input" id="email" type="email" name="email" required>
-                    </div>
-                    <div class="FormularioCaja-mensaje">
-                        <label class="Formulario-item" for="text">MENSAJE</label>
-                        <textarea class="Formulario-input" name="Mensaje" id="Mensaje" cols="30" rows="5"></textarea>
-                    </div>
-
-                    <div class="FormularioCaja-submit">
-                        <input class="Formulario-input Formulario-enviar" type="submit" value="ENVIAR">
-                    </div>
-                </form>
-            </div>
-
-            <div class="DispoCaja">
-                <i id="Icono" class="fa-solid fa-circle"></i>
-                <p id="Disponibilidad" class="Dispo-text"></p>
-                <div id="Reloj" class="Dispo-reloj"></div>
-            </div>
+        <main class="Main">
+            <div id="Cards" class="Cards"></div>
         </main>
 
         <footer id="Footer" class="Footer">
@@ -105,8 +75,7 @@
                 <i class="fa-regular fa-circle"></i>
             </div> -->
         </footer>
-
+        
+    </div>
 
 </body>
-
-</html>
