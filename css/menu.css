@@ -41,7 +41,6 @@
     position: absolute;
     top: 2rem;
     right: 1rem;
-    cursor: pointer;
 }
 
 .Menu-list {
@@ -54,7 +53,6 @@
 
 .Menu-item {
     font-size: 4em;
-    cursor: pointer;
 }
 
 .ListaRRSS {

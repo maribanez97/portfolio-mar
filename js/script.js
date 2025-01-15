@@ -1,7 +1,7 @@
 //-----------------------------------
 // 1. Constantes y variables
 //-----------------------------------
-
+const cursor = document.getElementById("Cursor");
 const btnMenuMobile = document.getElementById("BtnMenu-mobile");
 const btnMenuDesk = document.getElementById("BtnMenu-desk");
 const divMenu = document.getElementById("Menu");
@@ -122,9 +122,16 @@ const proyectos = [
 // 3. EventListeners
 //----------------------------------
 
+// Movimiento del cursor personalizado
+document.addEventListener('mousemove', (e) =>{
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
 // Abrimos y cerramos el menu al clicar sobre el boton MENU
 btnMenuMobile.addEventListener('click',() => {
-    divMenu.classList.toggle("isOculto");
+    divMenu.classList.remove("isOculto");
+    cursor.style.backgroundColor = "var(--secundario-color)";
 });
 
 btnMenuDesk.addEventListener('click',() => {
@@ -133,7 +140,8 @@ btnMenuDesk.addEventListener('click',() => {
 
 // Cerramos el menu al clicar sobre la X
 cerrarMenu.addEventListener('click',() => {
-    divMenu.classList.toggle("isOculto");
+    divMenu.classList.add("isOculto");
+    cursor.style.backgroundColor = "var(--secundario-color)";
 });
 
 // oscuroClaro.addEventListener('click', () => {

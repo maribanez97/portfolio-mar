@@ -49,6 +49,7 @@
     color: var(--secundario-color);
     font-size: 0.8em;
     padding: 0.8em 0.8em;
+    cursor: none;
 }
 
 .Formulario-input {
@@ -59,6 +60,7 @@
     border: none;
     background: transparent;
     color: var(--secundario-color);
+    cursor: none;
 }
 
 .Formulario-input:focus {
@@ -74,7 +76,6 @@
 }
 
 .FormularioCaja-submit {
-    cursor: pointer;
     background-color: var(--secundario-color);
     transition: background-color 0.5s ease;
 }
