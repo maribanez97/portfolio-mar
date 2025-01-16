@@ -6,8 +6,7 @@ const btnMenuMobile = document.getElementById("BtnMenu-mobile");
 const btnMenuDesk = document.getElementById("BtnMenu-desk");
 const divMenu = document.getElementById("Menu");
 const cerrarMenu = document.getElementById("Menu-cerrar");
-// const footer = document.getElementById("Footer")
-// const oscuroClaro = document.getElementById("OscuroClaro")
+
 
 // Creación de un array de objetos para que los proyectos se creen mediante JavaScript
 const proyectos = [
@@ -93,7 +92,7 @@ const proyectos = [
      año: "2019",
      servicios: "Photoshop, Illustrator, InDesign",
      tema: "grafico",
-     imagen1:"control-time-1.jpg",
+     imagen1:"control-time-1-1.jpg",
      alt1:"Proyecto 8.1",
      imagen2:"control-time-2.png",
      alt2:"Proyecto 8.2"
@@ -104,25 +103,13 @@ const proyectos = [
 // 2. Funciones
 //----------------------------------
 
-//función para cambio de de Modo de Claro a Oscuro y viceversa
-// function modoOscuroClaro(){
-//     const html = document.documentElement;
-
-//     html.style.setProperty('--principal-color','#fff');
-//     html.style.setProperty('--secundario-color','#000');
-//     // container.style.backgroundColor = 'background-color = var(--principal-color);';
-//     // btn.style.color  = 'color: var(--principal-color);';
-//     // tituloProyecto.style.color = 'color: var(--secundario-color);';
-//     // footer.style.color = 'color: var(--principal-color);';
-// }
-
 
 
 //----------------------------------
 // 3. EventListeners
 //----------------------------------
 
-// Movimiento del cursor personalizado
+// Movimiento del cursor personalizado (e es el número de Euler)
 document.addEventListener('mousemove', (e) =>{
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
