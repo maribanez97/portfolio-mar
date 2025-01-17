@@ -17,9 +17,9 @@ const proyectos = [
      año: "2021 - 2024",
      servicios: "Dirección de arte",
      tema: "grafico",
-     imagen1:"grid-m-catalogo.jpg",
+     imagen1:"catalogo-wabi.jpg",
      alt1:"Proyecto 1.1",
-     imagen2:"grid-da-comedor.jpg",
+     imagen2:"comedor-wabi.jpg",
      alt2:"Proyecto 1.2"
     },
     {
@@ -28,9 +28,9 @@ const proyectos = [
      año: "2023",
      servicios: "Diseño de producto",
      tema: "grafico",
-     imagen1:"grid-dp-cuadros.jpg",
+     imagen1:"cadal-lade.jpg",
      alt1:"Proyecto 2.1",
-     imagen2:"grid-dp-cuadros-2.jpg",
+     imagen2:"cadal-lade-textura.jpg",
      alt2:"Proyecto 2.2"
     },
     { 
@@ -46,56 +46,45 @@ const proyectos = [
     },
     { 
      id: 4,
-     titulo: "Reproductor",
+     titulo: "Chef-Conect",
      año: "2024",
      servicios: "HTML, CSS y JavaScript",
      tema: "web",
-     imagen1:"grid-da-lamparas.jpg",
-     alt1:"Proyecto 4.1",
-     imagen2:"grid-da-comedor.jpg",
-     alt2:"Proyecto 4.2",
-    },
-    { 
-     id: 5,
-     titulo: "Chef-Connect",
-     año: "2024",
-     servicios: "HTML, CSS y JavaScript",
-     tema: "web",
-     imagen1:"grid-da-lamparas.jpg",
+     video:"chef-connect-video.mp4",
      alt1:"Proyecto 5.1",
-     imagen2:"grid-da-comedor.jpg",
+     imagen2:"chef-connect-1.jpg",
      alt2:"Proyecto 5.2"
     },
     { 
-     id: 6,
+     id: 5,
      titulo: "Tu compartes, ellos también",
      año: "2019",
      servicios: "Photoshop, Illustrator, InDesign",
      tema: "grafico",
-     imagen1:"tu-compartes.png",
-     alt1:"Proyecto 6.1",
-     video:"https://player.vimeo.com/video/524801664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+     video:"tu-compartes-video.mp4",
+     imagen2:"tu-compartes.jpg",
+     alt2:"Proyecto 6.1"
     },
     { 
-     id: 7,
+     id: 6,
      titulo: "SOS360",
      año: "2024",
      servicios: "HTML, CSS y JavaScript",
      tema: "web",
-     imagen1:"grid-da-lamparas.jpg",
+     imagen1:"web-360-1.jpg",
      alt1:"Proyecto 7.1",
-     imagen2:"grid-da-comedor.jpg",
+     imagen2:"web-360-2.jpg",
      alt2:"Proyecto 7.2"
     },
     {
-     id: 8,
+     id: 7,
      titulo: "Control Time",
      año: "2019",
      servicios: "Photoshop, Illustrator, InDesign",
      tema: "grafico",
-     imagen1:"control-time-1-1.jpg",
+     imagen1:"control-time-1.jpg",
      alt1:"Proyecto 8.1",
-     imagen2:"control-time-2.png",
+     imagen2:"control-time-2.jpg",
      alt2:"Proyecto 8.2"
     }
  ];

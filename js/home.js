@@ -64,10 +64,10 @@ function imprimirProyectos(proyectos){
                                         <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
                                             <h3 class="Proyecto-titulo">${titulo}</h3>
                                             <div class="Proyecto-imgs">
-                                                <img class="Proyecto-img" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
-                                                <video class="Proyecto-img" autoplay muted loop>
-                                                    <source src="${video}" type="video/webm">
+                                                <video class="Proyecto-img Proyecto-video" autoplay muted loop>
+                                                    <source src="./videos/${video}" type="video/webm">
                                                 </video>
+                                                <img class="Proyecto-img" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
                                             </div>
                                         </a>
                                      </li>`

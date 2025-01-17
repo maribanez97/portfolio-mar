@@ -7,7 +7,7 @@ const proyecto = proyectos.find(proyecto => proyecto.id == proyectoId);
 
 divCards.innerHTML = `<div class="Card">
                         <div class="CardImgs">
-                            <img class="CardImg" src="./imgs/${proyecto.imagen1}" alt="${proyecto.alt1}" class="CardImgs-img">
+                            <img class="CardImg" src="./imgs/${proyecto.imagen2}" alt="${proyecto.alt2}" class="CardImgs-img">
                         </div>
                         <div class="CardListas">
                             <ul class="CardLista EstiloLista">
