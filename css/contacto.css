@@ -1,4 +1,5 @@
 
+/* Modificador del Main, que que quiereque se encuentre dentrado en la ventana */
 .Main-contacto {
     display: flex;
     flex-direction: column;
@@ -63,15 +64,10 @@
     cursor: none;
 }
 
+/* Apariencia del input cuando se clica para escribir en él */
 .Formulario-input:focus {
     background-color: var(--secundario-color);
     color: var(--principal-color);
-    border: none;
-}
-
-.Formulario-item~.Formulario-input:focus {
-    color: var(--principal-color);
-    background-color: var(--secundario-color);
     border: none;
 }
 
@@ -87,14 +83,17 @@
     transition: color 0.5s ease;
 }
 
+/* Cuando se clica la caja Enviar cambia el color de la caja */
 .FormularioCaja-submit:active {
     background-color: var(--principal-color);
 }
 
+/* Cuando se activa la caja Enviar cambia el color del texto */
 .FormularioCaja-submit:active .Formulario-enviar {
     color: var(--secundario-color);
 }
 
+/* Disponibilidad y reloj */
 .DispoCaja {
     display: flex;
     flex-direction: row;
@@ -105,6 +104,7 @@
     margin: 1rem 1rem 0 0;
 }
 
+/* Icono de disponibilidad parpadeando */
 .fa-circle {
     font-size: 0.5rem;
     color: rgb(255, 59, 59);
@@ -115,6 +115,7 @@
 color: rgb(110, 255, 78);
 }
 
+/* Animación del icono de disponibilidad */
 @keyframes pulso {
     0%, 100% {
         opacity: 0;
@@ -124,6 +125,7 @@ color: rgb(110, 255, 78);
     }
 }
 
+/* Responsive Tablets */
 @media screen and (min-width: 768px) {
       
     .FormularioCaja-submit:hover {
@@ -135,6 +137,7 @@ color: rgb(110, 255, 78);
     }
 }
 
+/* Responsive pantallas grandes */
 @media screen and (min-width: 1024px) {
 
     .ContenedorFormulario {

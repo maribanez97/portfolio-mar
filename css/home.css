@@ -18,6 +18,7 @@
 .Body {
     scroll-behavior: smooth;
     cursor: none;
+    overflow-x: hidden;
 }
 
 
@@ -79,8 +80,8 @@
 .Cursor {
     position: fixed;
     top: -3em;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: var(--secundario-color);
     transition: transform 0.1s ease-out;
@@ -88,6 +89,13 @@
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 30;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Cursor más grande para animar */
+.Cursor-crece {
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -110,8 +118,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: transparent;
-    /* Fondo transparente */
+    background: transparent; /* Fondo transparente */
     mix-blend-mode: difference;
     z-index: 10;
 }
@@ -122,9 +129,6 @@
 
 .MarIcon-img {
     height: 100%;
-    background: transparent;
-    /* Fondo transparente */
-    mix-blend-mode: difference;
 }
 
 .BtnsLayout {
@@ -171,14 +175,17 @@
     width: 100%;
 }
 
+/* Para cuando el botón sea formato hamburguesa */
 .u-noHover:hover::after{
  width: 0;
 }
 
+/* Para pantallas menores a 1024px */
 .Btn-desk {
     display: none;
 }
 
+/* Icono hamburguesa importado */
 .material-symbols-outlined {
     font-size: 1.5rem;
     font-weight: 200;
@@ -283,21 +290,9 @@
     font-size: 0.85em;
 }
 
-/* .OscuroClaro {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: var(--secundario-color);
-    mix-blend-mode: difference;
-}
-
-.fa-circle {
-    font-size: 1em;
-} */
 
 
-/* Estilo JavaScript */
+/* Estilos para añadir y quitar clases con JavaScript */
 .u-opacidad {
     opacity: 0;
 }
@@ -326,7 +321,7 @@
 }
 
 
-/* Responsive Ordenadores */
+/* Responsive pantallas grandes */
 @media screen and (min-width: 1024px) {
     .Preloader-img {
         width: 30%;
@@ -360,7 +355,7 @@
     }
 
     .Proyecto-titulo {
-        padding: 3rem 2rem 0 3rem;
+        padding: 3rem 2rem 0 8rem;
         font-size: 2rem;
     }
 
@@ -369,7 +364,7 @@
         width: 45%;
         justify-content: end;
         position: absolute;
-        right: 2em;
+        right: 8em;
         opacity: 0;
         transition: opacity 0.5s ease;
     }
@@ -378,14 +373,10 @@
         box-shadow: none;
     }
 
-    /* al hacer hover sobre el titulo aparece la imagen (~ selector de hermanos) */
+    /* Al hacer hover sobre el titulo aparece la imagen (~ selector de hermanos) */
     .Proyecto-titulo:hover ~ .Proyecto-imgs {
         opacity: 1;
     }
-
-    /* .u-mostrar {
-        opacity: 1;
-    } */
 
     .Proyecto-img {
         width: auto;

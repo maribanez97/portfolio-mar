@@ -6,6 +6,7 @@ const btnMenuMobile = document.getElementById("BtnMenu-mobile");
 const btnMenuDesk = document.getElementById("BtnMenu-desk");
 const divMenu = document.getElementById("Menu");
 const cerrarMenu = document.getElementById("Menu-cerrar");
+const menuItems = document.querySelectorAll(".Menu-item");
 
 
 // Creación de un array de objetos para que los proyectos se creen mediante JavaScript
@@ -103,6 +104,15 @@ const proyectos = [
 // 2. Funciones
 //----------------------------------
 
+// Agrandar el cursor cuando pasa por los items del menu
+menuItems.forEach((menuItem) =>{
+    menuItem.addEventListener('mouseenter', ()=> {
+        cursor.classList.add("Cursor-crece");
+    });
+    menuItem.addEventListener('mouseleave', ()=> {
+        cursor.classList.remove("Cursor-crece");
+    });
+});
 
 
 //----------------------------------
@@ -131,11 +141,14 @@ cerrarMenu.addEventListener('click',() => {
     cursor.style.backgroundColor = "var(--secundario-color)";
 });
 
-// oscuroClaro.addEventListener('click', () => {
-//     modoOscuroClaro();
-//     // btn.style.color  = 'color: var(--principal-color);';
-// });
+// Agrandar el cursor cuando pasa por el icono de cerrar el menú
+cerrarMenu.addEventListener('mouseenter', ()=> {
+    cursor.classList.add("Cursor-crece");
+});
 
+cerrarMenu.addEventListener('mouseleave', ()=> {
+    cursor.classList.remove("Cursor-crece");
+});
 
 
 //----------------------------------
