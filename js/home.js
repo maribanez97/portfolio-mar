@@ -63,11 +63,10 @@ function imprimirProyectos(proyectos){
             ulProyectos.innerHTML += `<li class="Proyecto">
                                         <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
                                             <h3 class="Proyecto-titulo">${titulo}</h3>
-                                            <div class="Proyecto-imgs">
-                                                <video class="Proyecto-img Proyecto-video" autoplay muted loop>
+                                            <div class="Proyecto-videos">
+                                                <video class="Proyecto-video" autoplay muted loop>
                                                     <source src="./videos/${video}" type="video/webm">
                                                 </video>
-                                                <img class="Proyecto-img" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
                                             </div>
                                         </a>
                                      </li>`
@@ -76,8 +75,8 @@ function imprimirProyectos(proyectos){
                                             <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
                                                 <h3 class="Proyecto-titulo">${titulo}</h3>
                                                 <div class="Proyecto-imgs">
-                                                    <img class="Proyecto-img Img--principal" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
-                                                    <img class="Proyecto-img Img--secundaria" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
+                                                    <img class="Proyecto-img Proyecto-imgPrincipal" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
+                                                    <img class="Proyecto-img Proyecto-imgSecundaria" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
                                                 </div>
                                             </a>
                                          </li>`
