@@ -31,9 +31,9 @@ const proyectos = [
      servicios: "Dirección de arte",
      tema: "grafico",
      imagen1:"catalogo-wabi.jpg",
-     alt1:"Proyecto 1.1",
+     alt1:"Imagen catálogo",
      imagen2:"comedor-wabi.jpg",
-     alt2:"Proyecto 1.2"
+     alt2:"Imagen comedor"
     },
     {
      id: 2, 
@@ -42,9 +42,9 @@ const proyectos = [
      servicios: "Diseño de producto",
      tema: "grafico",
      imagen1:"cadal-lade.jpg",
-     alt1:"Proyecto 2.1",
+     alt1:"Imagen cuadros",
      imagen2:"cadal-lade-textura.jpg",
-     alt2:"Proyecto 2.2"
+     alt2:"Imagen textura cuadro"
     },
     { 
      id: 3,
@@ -53,9 +53,9 @@ const proyectos = [
      servicios: "After Effects",
      tema: "grafico",
      imagen1:"real-refresh.png",
-     alt1:"Proyecto 3.1",
-     imagen2:"grid-da-comedor.jpg",
-     alt2:"Proyecto 3.2"
+     alt1:"Imagen logo",
+     imagen2:"real-refresh-phones.png",
+     alt2:"Imagen campaña"
     },
     { 
      id: 4,
@@ -64,19 +64,18 @@ const proyectos = [
      servicios: "HTML, CSS y JavaScript",
      tema: "web",
      video:"chef-connect-video.mp4",
-     alt1:"Proyecto 5.1",
      imagen2:"chef-connect-1.jpg",
-     alt2:"Proyecto 5.2"
+     alt2:"Imagen ordenador"
     },
     { 
      id: 5,
      titulo: "Tu compartes, ellos también",
      año: "2019",
-     servicios: "Photoshop, Illustrator, InDesign",
+     servicios: "Photoshop, Illustrator",
      tema: "grafico",
      video:"tu-compartes-video.mp4",
      imagen2:"tu-compartes.jpg",
-     alt2:"Proyecto 6.1"
+     alt2:"Imagen póster"
     },
     { 
      id: 6,
@@ -85,20 +84,20 @@ const proyectos = [
      servicios: "HTML, CSS y JavaScript",
      tema: "web",
      imagen1:"web-360-1.jpg",
-     alt1:"Proyecto 7.1",
+     alt1:"Imagen web",
      imagen2:"web-360-2.jpg",
-     alt2:"Proyecto 7.2"
+     alt2:"Imagen móvil"
     },
     {
      id: 7,
      titulo: "Control Time",
      año: "2019",
-     servicios: "Photoshop, Illustrator, InDesign",
+     servicios: "Maqueración con InDesign",
      tema: "grafico",
      imagen1:"control-time-1.jpg",
-     alt1:"Proyecto 8.1",
+     alt1:"Portada Control",
      imagen2:"control-time-2.jpg",
-     alt2:"Proyecto 8.2"
+     alt2:"Revista Control"
     }
  ];
 

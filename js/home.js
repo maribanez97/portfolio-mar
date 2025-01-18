@@ -64,8 +64,7 @@ function imprimirProyectos(proyectos){
                                         <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
                                             <h3 class="Proyecto-titulo">${titulo}</h3>
                                             <div class="Proyecto-videos">
-                                                <video class="Proyecto-video" autoplay muted loop>
-                                                    <source src="./videos/${video}" type="video/webm">
+                                                <video class="Proyecto-video" src="./videos/${video}" type="video/mp4" poster="./imgs/${imagen2}" autoplay muted loop>
                                                 </video>
                                             </div>
                                         </a>
