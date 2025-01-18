@@ -48,10 +48,14 @@
     }
 
     .CardImgs {
-        width: 50%;
+        width: 60%;
         max-height: 80vh;
         padding-top: 16px;
         
+    }
+
+    .CardImgs-img {
+        object-fit:fill;
     }
 
     .CardListas {
