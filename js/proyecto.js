@@ -1,8 +1,14 @@
-const divCards = document.getElementById("Cards");
 
+// Construir una página para cada proyecto según su id a partir de la página proyecto.
+// Que la url encuentre cual es el id del proyecto al que se clica para crear su página proyecto.html?id=1
+
+// Definir lasconstantes
+const divCards = document.getElementById("Cards");
+// Construir la url de cada proyecto
 const urlParams = new URLSearchParams(window.location.search);
 const proyectoId = urlParams.get("id");
 
+// Buscar que el id del proyecto sea igual al id de la url y construir el html en divCard
 const proyecto = proyectos.find(proyecto => proyecto.id == proyectoId);
 
 divCards.innerHTML = `<div class="Card">

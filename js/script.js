@@ -9,7 +9,20 @@ const cerrarMenu = document.getElementById("Menu-cerrar");
 const menuItems = document.querySelectorAll(".Menu-item");
 
 
-// Creación de un array de objetos para que los proyectos se creen mediante JavaScript
+/**Creación de un array de objetos para cada proyecto
+ * Objeto: proyectos
+ * @typedef {object} proyecto
+ * @property {number} id
+ * @property {string} titulo        titulo del proyecto.
+ * @property {string} año           año en el que se realizó.
+ * @property {string} servicios     tipo de proyecto y programas utilizados.
+ * @property {string} tema          temática del proyecto.
+ * @property {string} imagen1       Imagen principal.
+ * @property {string} alt1          texto alternativo de la imagen principal.
+ * @property {string} imagen2       Imagen secundaria.
+ * @property {string} alt2          Texto alternativo de la imagen secundaria.
+ * @property {string} video         video en algunos proyectos.
+ */
 const proyectos = [
     { 
      id: 1,
@@ -94,6 +107,7 @@ const proyectos = [
 //----------------------------------
 
 // Agrandar el cursor cuando pasa por los items del menu
+// Para cada item del menu escuchar cuando el ratón para sobre el y añadir la clase para crecer, cuando el cursor se va, se quita la clase y vuelve altamaño inicial.
 menuItems.forEach((menuItem) =>{
     menuItem.addEventListener('mouseenter', ()=> {
         cursor.classList.add("Cursor-crece");
@@ -110,6 +124,7 @@ menuItems.forEach((menuItem) =>{
 
 // Movimiento del cursor personalizado (e es el número de Euler)
 document.addEventListener('mousemove', (e) =>{
+    // control de la distancia en vertical y horizontal del ratón
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
 });
