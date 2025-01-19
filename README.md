@@ -1,5 +1,5 @@
 # PROYECTO
-Proyecto final de una web fnucional para el módulo de Diseño Web HTML, CSS y JavaScript
+Proyecto final de una web funcional para el módulo de Diseño Web HTML, CSS y JavaScript
 
 ## Título del proyecto
 Portfolio Mar Ibáñez
