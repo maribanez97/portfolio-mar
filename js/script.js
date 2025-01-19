@@ -1,7 +1,7 @@
 //-----------------------------------
 // 1. Constantes y variables
 //-----------------------------------
-const cursor = document.getElementById("CursorId");
+const cursor = document.getElementById("Cursor");
 const btnMenuMobile = document.getElementById("BtnMenu-mobile");
 const btnMenuDesk = document.getElementById("BtnMenu-desk");
 const divMenu = document.getElementById("Menu");
