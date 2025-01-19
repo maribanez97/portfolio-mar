@@ -54,7 +54,7 @@ const proyectos = [
      tema: "grafico",
      imagen1:"real-refresh.webp",
      alt1:"Imagen logo",
-     imagen2:"real-refresh-phones.png",
+     imagen2:"real-refresh-phones.webp",
      alt2:"Imagen campaña"
     },
     { 
