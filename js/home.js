@@ -6,10 +6,6 @@ const container = document.getElementById("Container");
 const btnWeb = document.getElementById("BtnWeb");
 const btnGrafico = document.getElementById("BtnGrafico");
 const ulProyectos = document.getElementById("ListaProyectos");
-const titulosProyecto = document.querySelectorAll(".Proyecto-titulo");
-const imgsProyecto = document.querySelectorAll(".Proyecto-imgs");
-
-
 
 //----------------------------------
 // 2. Funciones
