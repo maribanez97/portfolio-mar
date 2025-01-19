@@ -30,9 +30,9 @@ const proyectos = [
      año: "2021 - 2024",
      servicios: "Dirección de arte",
      tema: "grafico",
-     imagen1:"catalogo-wabi.jpg",
+     imagen1:"catalogo-wabi.webp",
      alt1:"Imagen catálogo",
-     imagen2:"comedor-wabi.jpg",
+     imagen2:"comedor-wabi.webp",
      alt2:"Imagen comedor"
     },
     {
@@ -41,9 +41,9 @@ const proyectos = [
      año: "2023",
      servicios: "Diseño de producto",
      tema: "grafico",
-     imagen1:"cadal-lade.jpg",
+     imagen1:"cadal-lade.webp",
      alt1:"Imagen cuadros",
-     imagen2:"cadal-lade-textura.jpg",
+     imagen2:"cadal-lade-textura.webp",
      alt2:"Imagen textura cuadro"
     },
     { 
@@ -52,7 +52,7 @@ const proyectos = [
      año: "2021",
      servicios: "After Effects",
      tema: "grafico",
-     imagen1:"real-refresh.jpg",
+     imagen1:"real-refresh.webp",
      alt1:"Imagen logo",
      imagen2:"real-refresh-phones.png",
      alt2:"Imagen campaña"
@@ -64,7 +64,7 @@ const proyectos = [
      servicios: "HTML, CSS y JavaScript",
      tema: "web",
      video:"chef-connect-video.mp4",
-     imagen2:"chef-connect-1.jpg",
+     imagen2:"chef-connect-1.webp",
      alt2:"Imagen ordenador"
     },
     { 
@@ -74,7 +74,7 @@ const proyectos = [
      servicios: "Photoshop, Illustrator",
      tema: "grafico",
      video:"tu-compartes-video.mp4",
-     imagen2:"tu-compartes.jpg",
+     imagen2:"tu-compartes.webp",
      alt2:"Imagen póster"
     },
     { 
@@ -83,9 +83,9 @@ const proyectos = [
      año: "2024",
      servicios: "HTML, CSS y JavaScript",
      tema: "web",
-     imagen1:"web-360-1.jpg",
+     imagen1:"web-360-1.webp",
      alt1:"Imagen web",
-     imagen2:"web-360-2.jpg",
+     imagen2:"web-360-2.webp",
      alt2:"Imagen móvil"
     },
     {
@@ -94,9 +94,9 @@ const proyectos = [
      año: "2019",
      servicios: "Maqueración con InDesign",
      tema: "grafico",
-     imagen1:"control-time-1.jpg",
+     imagen1:"control-time-1.webp",
      alt1:"Portada Control",
-     imagen2:"control-time-2.jpg",
+     imagen2:"control-time-2.webp",
      alt2:"Revista Control"
     }
  ];
