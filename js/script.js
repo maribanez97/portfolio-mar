@@ -52,7 +52,7 @@ const proyectos = [
      año: "2021",
      servicios: "After Effects",
      tema: "grafico",
-     imagen1:"real-refresh.png",
+     imagen1:"real-refresh.jpg",
      alt1:"Imagen logo",
      imagen2:"real-refresh-phones.png",
      alt2:"Imagen campaña"
