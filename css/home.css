@@ -20,12 +20,23 @@
 }
 
 .Proyecto-titulo {
-    display:flex;
-    display:row;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1.2rem;
     color: var(--principal-color);
     font-weight: 400;
+}
+
+.Proyecto-numero {
+    font-size: 0.6em;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.Proyecto-nombre {
+    display: inline-block;
 }
 
 .Proyecto-imgs {
