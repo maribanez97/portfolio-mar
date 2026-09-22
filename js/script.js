@@ -25,7 +25,7 @@ const menuItems = document.querySelectorAll(".Menu-item");
  */
 const proyectos = [
     { 
-     id: 1,
+     id: 01,
      titulo: "Wabi Home",
      año: "2021 - 2024",
      servicios: "Dirección de arte",
@@ -36,7 +36,7 @@ const proyectos = [
      alt2:"Imagen comedor"
     },
     {
-     id: 2, 
+     id: 02, 
      titulo: "Cadal y Lade",
      año: "2023",
      servicios: "Diseño de producto",
@@ -47,7 +47,7 @@ const proyectos = [
      alt2:"Imagen textura cuadro"
     },
     { 
-     id: 3,
+     id: 03,
      titulo: "Real Refresh",
      año: "2021",
      servicios: "After Effects",
@@ -58,7 +58,7 @@ const proyectos = [
      alt2:"Imagen campaña"
     },
     { 
-     id: 4,
+     id: 04,
      titulo: "Chef-Conect",
      año: "2024",
      servicios: "HTML, CSS y JavaScript",
@@ -68,7 +68,7 @@ const proyectos = [
      alt2:"Imagen ordenador"
     },
     { 
-     id: 5,
+     id: 05,
      titulo: "Tu compartes, ellos también",
      año: "2019",
      servicios: "Photoshop, Illustrator",
@@ -78,7 +78,7 @@ const proyectos = [
      alt2:"Imagen póster"
     },
     { 
-     id: 6,
+     id: 06,
      titulo: "SOS360",
      año: "2024",
      servicios: "HTML, CSS y JavaScript",
@@ -89,7 +89,7 @@ const proyectos = [
      alt2:"Imagen móvil"
     },
     {
-     id: 7,
+     id: 07,
      titulo: "Control Time",
      año: "2019",
      servicios: "Maqueración con InDesign",
