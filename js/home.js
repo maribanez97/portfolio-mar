@@ -46,7 +46,7 @@ function imprimirProyectos(proyectos){
     ulProyectos.innerHTML = "";
 
     proyectos.forEach((proyecto) => {
-        let id = proyecto.titulo.toUpperCase();
+        let id = proyecto.id.toUpperCase();
         let titulo = proyecto.titulo.toUpperCase();
         let imagen1 = proyecto.imagen1;
         let alt1 = proyecto.alt1;
