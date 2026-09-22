@@ -58,7 +58,7 @@ function imprimirProyectos(proyectos){
         if (video){
             ulProyectos.innerHTML += `<li class="Proyecto">
                                         <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
-                                            <h3 class="Proyecto-titulo">${titulo}</h3>
+                                            <h3 class="Proyecto-titulo">hola${titulo}</h3>
                                             <div class="Proyecto-videos">
                                                 <video class="Proyecto-video" src="./videos/${video}" type="video/mp4" poster="./imgs/${imagen2}" autoplay muted loop>
                                                 </video>
@@ -68,7 +68,7 @@ function imprimirProyectos(proyectos){
         } else {
                 ulProyectos.innerHTML += `<li class="Proyecto">
                                             <a class="EstiloAnchor Proyecto-enlace" href="./proyecto.html?id=${proyecto.id}">
-                                                <h3 class="Proyecto-titulo">${titulo}</h3>
+                                                <h3 class="Proyecto-titulo">hola${titulo}</h3>
                                                 <div class="Proyecto-imgs">
                                                     <img class="Proyecto-img Proyecto-imgPrincipal" src="./imgs/${imagen1}" loading="lazy" alt="${alt1}">
                                                     <img class="Proyecto-img Proyecto-imgSecundaria" src="./imgs/${imagen2}" loading="lazy" alt="${alt2}">
