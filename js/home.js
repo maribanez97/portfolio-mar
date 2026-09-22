@@ -45,8 +45,8 @@ function imprimirProyectos(proyectos){
     // Limpiar lista de proyectos para no duplicar cuando se filtra por web o gráfico
     ulProyectos.innerHTML = "";
 
-    proyectos.forEach((proyecto, id) => {
-        let numProyecto = String(id + 1).padStart(2, "0");
+    proyectos.forEach((proyecto) => {
+        let numProyecto = String(proyecto.id).padStart(2, "0");
         let titulo = proyecto.titulo.toUpperCase();
         let imagen1 = proyecto.imagen1;
         let alt1 = proyecto.alt1;
