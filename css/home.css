@@ -22,7 +22,7 @@
 .Proyecto-titulo {
     display: flex;
     align-items: baseline;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
     color: var(--principal-color);
@@ -30,8 +30,7 @@
 }
 
 .Proyecto-numero {
-    font-size: 0.6em;
-    opacity: 0.5;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
