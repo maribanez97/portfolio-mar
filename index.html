@@ -30,16 +30,11 @@
 
 <body class="Body">
 
-    <!-- Página de carga inicial que desaparece cuando carga el DOM -->
-    <div id="Preloader" class="Preloader">
-        <img class="Preloader-img" src="./imgs/icon-graphic-blanco-preloader.png" alt="icono-Mar" loading="lazy">
-    </div>
-
     <!-- Cursor personalizado -->
     <div id="Cursor" class="Cursor"></div>
 
     <!-- Contenedor de la web. Permanece oculto hasta que carga el DOM -->
-    <div id="Container" class="Container isOculto">
+    <div id="Container" class="Container">
 
         <!-- Header que se mantiene visible en todo momento cambia de mobile a desk su apariencia. En esta página incluye dos botones para filtrar -->
         <header class="Header">
@@ -49,13 +44,15 @@
                         alt="Icono Mar Ibáñez" class="MarIcon-img" loading="lazy"></a>
             </div>
             <div class="BtnsLayout">
-                <button id="BtnWeb" class="Btn">WEB</button>
+                <button id="BtnTodos" class="Btn isSeleccionado" aria-pressed="true">TODOS</button>
+                <button id="BtnWeb" class="Btn">DIGITAL</button>
                 <button id="BtnGrafico" class="Btn">GRÁFICO</button>
                 <button id="BtnMenu-mobile" class="Btn Btn-mobile u-noHover"><span class="material-symbols-outlined">
                         menu
                     </span></button>
                 <button id="BtnMenu-desk" class="Btn Btn-desk">MENÚ</button>
             </div>
+            <p id="FiltroEstado" class="u-visuallyHidden" aria-live="polite"></p>
 
         </header>
 
