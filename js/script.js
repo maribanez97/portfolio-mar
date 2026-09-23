@@ -61,7 +61,7 @@ const proyectos = [
      id: 4,
      titulo: "Chef-Conect",
      año: "2024",
-     servicios: "HTML, CSS y JavaScript",
+     servicios: "HTML, CSS y JS",
      tema: "web",
      video:"chef-connect-video.mp4",
      imagen2:"chef-connect-1.webp",
@@ -71,7 +71,7 @@ const proyectos = [
      id: 5,
      titulo: "Tu compartes, ellos también",
      año: "2019",
-     servicios: "Photoshop, Illustrator",
+     servicios: "Abobe Suite",
      tema: "grafico",
      video:"tu-compartes-video.mp4",
      imagen2:"tu-compartes.webp",
@@ -81,7 +81,7 @@ const proyectos = [
      id: 6,
      titulo: "SOS360",
      año: "2024",
-     servicios: "HTML, CSS y JavaScript",
+     servicios: "HTML, CSS y JS",
      tema: "web",
      imagen1:"web-360-1.webp",
      alt1:"Imagen web",
@@ -92,7 +92,7 @@ const proyectos = [
      id: 7,
      titulo: "Control Time",
      año: "2019",
-     servicios: "Maqueración con InDesign",
+     servicios: "InDesign",
      tema: "grafico",
      imagen1:"control-time-1.webp",
      alt1:"Portada Control",
@@ -122,11 +122,13 @@ menuItems.forEach((menuItem) =>{
 //----------------------------------
 
 // Movimiento del cursor personalizado (e es el número de Euler)
-document.addEventListener('mousemove', (e) =>{
-    // control de la distancia en vertical y horizontal del ratón
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+if (window.matchMedia('(pointer: fine)').matches && cursor) {
+    document.addEventListener('mousemove', (e) =>{
+        // control de la distancia en vertical y horizontal del ratón
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+}
 
 // Abrimos y cerramos el menu al clicar sobre el boton MENU
 btnMenuMobile.addEventListener('click',() => {

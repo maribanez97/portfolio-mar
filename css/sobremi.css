@@ -1,11 +1,10 @@
 
 .Main-sobreMi {
-    padding-bottom: 0;
+    padding: 5rem 2rem 5rem;
 }
 
 .SobreMiTexto {
-    padding: 1rem;
-    
+    padding: 1rem 0;
 }
 
 .SobreMi-titulo {
@@ -24,7 +23,7 @@
 }
 
 .SobreMiImg {
-    width: 100vw;
+    width: 100%;
     height: 30rem;
 }
 
@@ -36,17 +35,16 @@
 
 @media screen and (min-width: 768px) {
     .SobreMi {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: stretch;
+        gap: clamp(2rem, 5vw, 7rem);
     }
 
     .SobreMiTexto {
-        position: absolute;
-        top: 2rem;
-        left: 40%;
+        grid-column: 2;
+        grid-row: 1;
+        padding: 1rem 2rem 1rem 0;
     }
 
     .SobreMi-titulo {
@@ -56,14 +54,80 @@
     }
     
     .SobreMi-texto {
-        padding: 1rem 0 1rem 5rem;
-        font-size: 1.6em;
-        width: 90%;
+        padding: 1rem 0;
+        font-size: clamp(1.1rem, 1.5vw, 1.6rem);
+        width: 100%;
     }
 
     .SobreMiImg {
-        padding-top: 2rem;
-        height: 100vh;
-        width: 50%;
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        height: auto;
+        align-self: stretch;
+    }
+
+    .SobreMi-img {
+        height: 100%;
+    }
+
+    .AreasExperiencia {
+    padding: clamp(5rem, 5vw, 10rem);
+    }
+}
+
+.AreasExperiencia {
+    padding: clamp(5rem, 12vw, 10rem) 0 3rem;
+}
+
+.AreasExperiencia-titulo {
+    max-width: 9ch;
+    margin: 0 0 clamp(3rem, 7vw, 6rem);
+    color: var(--principal-color);
+    font-family: var(--font-grafico-regular);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.AreasExperiencia-lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 10vw, 10rem);
+    row-gap: clamp(2rem, 4vw, 3.5rem);
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.AreaExperiencia-titulo {
+    margin-bottom: 0.25rem;
+    color: var(--principal-color);
+    font-family: "Roboto Flex", sans-serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 600;
+}
+
+.AreaExperiencia-texto {
+    max-width: 32rem;
+    color: var(--principal-color);
+    font-family: "Roboto Flex", sans-serif;
+    font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+    font-weight: 350;
+    line-height: 1.35;
+}
+
+@media screen and (max-width: 767px) {
+     .AreasExperiencia-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .AreasExperiencia-titulo {
+        max-width: 8ch;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .AreasExperiencia {
+    padding: clamp(5rem, 5vw, 10rem);
     }
 }
